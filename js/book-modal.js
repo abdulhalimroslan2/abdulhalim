@@ -1,0 +1,187 @@
+/**
+ * PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
+ * 3D BOOK POPUP & INTERACTIVE MODAL CONTROLLER
+ */
+
+(function () {
+  'use strict';
+
+  const booksData = [
+    {
+      id: 1,
+      title: "Booklet Cheatnote x Tasfiz Fizik Tingkatan 4",
+      subtitle: "Edisi Khas SPM KSSM (Edisi 2024)",
+      author: "Abdul Halim bin Roslan (Penulis & Kandungan) & Nor Farhana binti Farik (Reka Bentuk)",
+      publisher: "Cikgu Halim Fizik & Inovasi Pendidikan",
+      year: "2024",
+      category: "Buku Rujukan Poket & Nota Padat",
+      cover: "assets/books/book_cheatnote_t4.png",
+      synopsis: "Booklet bersaiz poket yang komprehensif mengandungi rahsia skor A+ Fizik SPM. Menghimpunkan rumusan formula, takrifan konsep, kata kunci soalan SPM serta tip menjawab dengan pantas dan tepat.",
+      features: [
+        "Inklusif, menyeluruh dan mudah dibawa ke mana-mana",
+        "Kuasai keseluruhan konsep Fizik Tingkatan 4 dengan cepat",
+        "Kompilasi lengkap Formula & Definisi standard KSSM",
+        "Bonus: Rumusan Simbol & Kuantiti Fizik T4 + Ruangan Catatan Nota"
+      ]
+    },
+    {
+      id: 2,
+      title: "Booklet Cheatnote x Tasfiz Fizik Tingkatan 5",
+      subtitle: "Edisi Khas SPM KSSM (Edisi 2024)",
+      author: "Abdul Halim bin Roslan (Penulis & Kandungan) & Nor Farhana binti Farik (Reka Bentuk)",
+      publisher: "Cikgu Halim Fizik & Inovasi Pendidikan",
+      year: "2024",
+      category: "Buku Rujukan Poket & Nota Padat",
+      cover: "assets/books/book_cheatnote_t5.png",
+      synopsis: "Panduan poket pantas untuk calon SPM menguasai topik-topik aras tinggi Fizik Tingkatan 5. Mengandungi visual rajah litar, gelombang, fizik kuantum dan nuklear secara mudah difahami.",
+      features: [
+        "Rahsia Skor A+ bagi silibus Fizik Tingkatan 5 SPM",
+        "Penerangan ringkas tetapi padat bagi topik-topik sukar",
+        "Visual infografik berwarna penuh untuk pemahaman pantas",
+        "Bonus: Ringkasan Simbol, Kuantiti & Definisi Fizik Tingkatan 5"
+      ]
+    },
+    {
+      id: 3,
+      title: "Modul Konstruk Tingkatan 4 Fizik",
+      subtitle: "Dwibahasa (BM & ENG) • Siri Modul SPM",
+      author: "A. H. Roslan (Guru Cemerlang Fizik)",
+      publisher: "Nilam Publication Sdn. Bhd.",
+      year: "2024 / 2025",
+      category: "Buku Kerja & Modul Pembelajaran Kebangsaan",
+      cover: "assets/books/book_modul_t4.jpg",
+      synopsis: "Modul latihan dan pengukuhan berimpak tinggi yang diterbitkan secara komersial di peringkat kebangsaan oleh Nilam Publication. Menepati format pentaksiran dan pembinaan konstruk Lembaga Peperiksaan KPM.",
+      features: [
+        "Tepat Mengikut Konstruk SPM Sebenar (Lembaga Peperiksaan)",
+        "Kesahan Tinggi bagi Instrumen PBD Bertulis",
+        "Kaedah PICK (Physics Ingat Cara Kreatif)",
+        "Dilengkapi Mnemonik & Ilustrasi Kreatif untuk Mudah Ingat"
+      ]
+    },
+    {
+      id: 4,
+      title: "Modul Konstruk Tingkatan 5 Fizik",
+      subtitle: "Dwibahasa (BM & ENG) • Siri Modul SPM",
+      author: "A. H. Roslan (Guru Cemerlang Fizik)",
+      publisher: "Nilam Publication Sdn. Bhd.",
+      year: "2024 / 2025",
+      category: "Buku Kerja & Modul Pembelajaran Kebangsaan",
+      cover: "assets/books/book_modul_t5.jpg",
+      synopsis: "Buku modul pembelajaran lanjutan bagi silibus Tingkatan 5 yang membimbing murid menguasai soalan Kemahiran Berfikir Aras Tinggi (KBAT) dan teknik menjawab kertas 1, 2 dan 3 Fizik SPM.",
+      features: [
+        "Tepat Mengikut Konstruk SPM Sebenar & Piawaian KPM",
+        "Latihan Topikal Berperingkat daripada Asas ke Aras KBAT",
+        "Kaedah PICK (Physics Ingat Cara Kreatif)",
+        "Teknik Mnemonik Visual & Panduan Skema Penskoran Cemerlang"
+      ]
+    },
+    {
+      id: 5,
+      title: "Rona-Rona Pendidik: Anekdot Edufluencers",
+      subtitle: "Karya Penulisan Inspirasi Guru Negeri Perak",
+      author: "Abdul Halim bin Roslan (Penulis Bersama Edufluencers JPN Perak)",
+      publisher: "Sektor Pembelajaran, Jabatan Pendidikan Negeri Perak",
+      year: "2026",
+      category: "Buku Penulisan Ilmiah & Anekdot Pendidikan",
+      cover: "assets/books/book_anekdot_perak.png",
+      synopsis: "Buku antologi anekdot rasmi anjuran Jabatan Pendidikan Negeri Perak yang menghimpunkan kisah inspirasi, perjuangan dan amalan pedagogi kreatif guru-guru terpilih di bawah komuniti Edufluencers KPM Negeri Perak.",
+      features: [
+        "Diterbitkan oleh Jabatan Pendidikan Negeri (JPN) Perak",
+        "Dokumentasi naratif inspirasi transformasi bilik darjah",
+        "Perkongsian amalan terbaik pendidik digital dan inovator",
+        "Menjadi bahan rujukan pembudayaan pedagogi kreatif negeri"
+      ]
+    }
+  ];
+
+  let currentBookIndex = 0;
+
+  window.openBookModal = function (bookId) {
+    const index = booksData.findIndex(b => b.id === parseInt(bookId, 10));
+    if (index === -1) return;
+    currentBookIndex = index;
+    renderBookModal(booksData[index]);
+
+    const modal = document.getElementById('open-book-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeBookModal = function () {
+    const modal = document.getElementById('open-book-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  function renderBookModal(book) {
+    const coverImg = document.getElementById('modal-book-cover');
+    const chipPublisher = document.getElementById('modal-book-publisher-chip');
+    const chipYear = document.getElementById('modal-book-year-chip');
+    const chipCategory = document.getElementById('modal-book-cat-chip');
+    const publisherTag = document.getElementById('modal-book-publisher-tag');
+    const titleEl = document.getElementById('modal-book-title');
+    const authorEl = document.getElementById('modal-book-author');
+    const synopsisEl = document.getElementById('modal-book-synopsis');
+    const featuresList = document.getElementById('modal-book-features');
+    const btnHd = document.getElementById('modal-book-btn-hd');
+
+    if (coverImg) coverImg.src = book.cover;
+    if (chipPublisher) chipPublisher.textContent = book.publisher;
+    if (chipYear) chipYear.textContent = `Tahun ${book.year}`;
+    if (chipCategory) chipCategory.textContent = book.category;
+    if (publisherTag) publisherTag.textContent = `${book.publisher} • ${book.year}`;
+    if (titleEl) titleEl.textContent = book.title;
+    if (authorEl) authorEl.textContent = `✍️ ${book.author}`;
+    if (synopsisEl) synopsisEl.textContent = book.synopsis;
+
+    if (featuresList) {
+      featuresList.innerHTML = '';
+      book.features.forEach(f => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="bullet-check">✓</span><span>${f}</span>`;
+        featuresList.appendChild(li);
+      });
+    }
+
+    if (btnHd) {
+      btnHd.onclick = function () {
+        if (typeof window.openPosterLightbox === 'function') {
+          window.openPosterLightbox(book.cover, `${book.title} (Kulit Resolusi Tinggi)`);
+        }
+      };
+    }
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    const modal = document.getElementById('open-book-modal');
+    if (!modal || !modal.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+      window.closeBookModal();
+    } else if (e.key === 'ArrowRight') {
+      currentBookIndex = (currentBookIndex + 1) % booksData.length;
+      renderBookModal(booksData[currentBookIndex]);
+    } else if (e.key === 'ArrowLeft') {
+      currentBookIndex = (currentBookIndex - 1 + booksData.length) % booksData.length;
+      renderBookModal(booksData[currentBookIndex]);
+    }
+  });
+
+  // Close modal when clicking backdrop
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('open-book-modal');
+    if (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          window.closeBookModal();
+        }
+      });
+    }
+  });
+
+})();
