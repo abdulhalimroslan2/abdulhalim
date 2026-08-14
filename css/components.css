@@ -104,6 +104,28 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform var(--trans-normal), box-shadow var(--trans-normal), border-color var(--trans-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-bento-card.profile-design-1 {
+  background: #ffffff url('../assets/images/profile-bg-1.png') no-repeat right center / cover !important;
+}
+
+.profile-bento-card.profile-design-2 {
+  background: #ffffff url('../assets/images/profile-bg-2.png') no-repeat right center / cover !important;
+}
+
+.profile-bento-card.profile-design-3 {
+  background: #ffffff url('../assets/images/profile-bg-3.png') no-repeat right center / cover !important;
+}
+
+.profile-bento-card.profile-design-4 {
+  background: #ffffff url('../assets/images/profile-bg-4.png') no-repeat right center / cover !important;
+}
+
+.profile-bento-card.profile-design-5 {
+  background: #ffffff url('../assets/images/profile-bg-5.png') no-repeat right center / cover !important;
 }
 
 .profile-bento-card:hover {
