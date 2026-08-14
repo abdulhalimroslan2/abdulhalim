@@ -16,6 +16,9 @@
       year: "2024",
       category: "Buku Rujukan Poket & Nota Padat",
       cover: "assets/books/book_cheatnote_t4.png",
+      storeUrl: "https://shop.tiktok.com/my/pdp/bukuk-rujukan-fizik-spm-2025-nota-ringkas-formula-penting-grafik-warna-warni/1730571707799471726",
+      storeLabel: "Dapatkan di TikTok Shop ↗",
+      storeClass: "tiktok",
       synopsis: "Booklet bersaiz poket yang komprehensif mengandungi rahsia skor A+ Fizik SPM. Menghimpunkan rumusan formula, takrifan konsep, kata kunci soalan SPM serta tip menjawab dengan pantas dan tepat.",
       features: [
         "Inklusif, menyeluruh dan mudah dibawa ke mana-mana",
@@ -33,6 +36,9 @@
       year: "2024",
       category: "Buku Rujukan Poket & Nota Padat",
       cover: "assets/books/book_cheatnote_t5.png",
+      storeUrl: "https://shop.tiktok.com/my/pdp/bukuk-rujukan-fizik-spm-2025-nota-ringkas-formula-penting-grafik-warna-warni/1730571707799471726",
+      storeLabel: "Dapatkan di TikTok Shop ↗",
+      storeClass: "tiktok",
       synopsis: "Panduan poket pantas untuk calon SPM menguasai topik-topik aras tinggi Fizik Tingkatan 5. Mengandungi visual rajah litar, gelombang, fizik kuantum dan nuklear secara mudah difahami.",
       features: [
         "Rahsia Skor A+ bagi silibus Fizik Tingkatan 5 SPM",
@@ -50,6 +56,9 @@
       year: "2024 / 2025",
       category: "Buku Kerja & Modul Pembelajaran Kebangsaan",
       cover: "assets/books/book_modul_t4.jpg",
+      storeUrl: "https://shop.tiktok.com/my/pdp/modul-konstruksi-fizikal-tingkatan-4-5-dwibahasa-latihan-tp/1733545067692787176",
+      storeLabel: "Dapatkan di TikTok Shop ↗",
+      storeClass: "tiktok",
       synopsis: "Modul latihan dan pengukuhan berimpak tinggi yang diterbitkan secara komersial di peringkat kebangsaan oleh Nilam Publication. Menepati format pentaksiran dan pembinaan konstruk Lembaga Peperiksaan KPM.",
       features: [
         "Tepat Mengikut Konstruk SPM Sebenar (Lembaga Peperiksaan)",
@@ -67,6 +76,9 @@
       year: "2024 / 2025",
       category: "Buku Kerja & Modul Pembelajaran Kebangsaan",
       cover: "assets/books/book_modul_t5.jpg",
+      storeUrl: "https://shop.tiktok.com/my/pdp/modul-konstruksi-fizikal-tingkatan-4-5-dwibahasa-latihan-tp/1733545067692787176",
+      storeLabel: "Dapatkan di TikTok Shop ↗",
+      storeClass: "tiktok",
       synopsis: "Buku modul pembelajaran lanjutan bagi silibus Tingkatan 5 yang membimbing murid menguasai soalan Kemahiran Berfikir Aras Tinggi (KBAT) dan teknik menjawab kertas 1, 2 dan 3 Fizik SPM.",
       features: [
         "Tepat Mengikut Konstruk SPM Sebenar & Piawaian KPM",
@@ -85,6 +97,9 @@
       year: "2026",
       category: "Buku Penulisan Ilmiah & Anekdot Pendidikan",
       cover: "assets/books/book_anekdot_perak.png",
+      storeUrl: "https://rakbukushe.com/",
+      storeLabel: "Laman Rasmi Penerbit ↗",
+      storeClass: "rak-buku",
       synopsis: "Buku antologi anekdot rasmi anjuran komuniti Edufluencers yang diterbitkan oleh Syahida Hassan Enterprise. Menghimpunkan kisah inspirasi, perjuangan dan amalan pedagogi kreatif guru-guru terpilih di bawah komuniti Edufluencers KPM Negeri Perak.",
       features: [
         "Penerbit: Syahida Hassan Enterprise (rakbukushe.com)",
@@ -129,7 +144,7 @@
     const synopsisEl = document.getElementById('modal-book-synopsis');
     const featuresList = document.getElementById('modal-book-features');
     const btnHd = document.getElementById('modal-book-btn-hd');
-    const publisherLinkEl = document.getElementById('modal-book-publisher-link');
+    const btnShop = document.getElementById('modal-book-btn-shop');
 
     if (coverImg) coverImg.src = book.cover;
     if (chipPublisher) {
@@ -162,6 +177,17 @@
         }
         featuresList.appendChild(li);
       });
+    }
+
+    if (btnShop) {
+      if (book.storeUrl) {
+        btnShop.href = book.storeUrl;
+        btnShop.style.display = 'inline-flex';
+        btnShop.className = `btn-open-shop ${book.storeClass || ''}`;
+        btnShop.innerHTML = `<span>${book.storeLabel || 'Dapatkan Buku ↗'}</span>`;
+      } else {
+        btnShop.style.display = 'none';
+      }
     }
 
     if (btnHd) {
