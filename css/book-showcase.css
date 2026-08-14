@@ -1,27 +1,31 @@
 /* ==========================================================================
-   PENULISAN & PENERBITAN: 3D OVERLAPPING BOOK STACK & OPEN BOOK POPUP MODAL
+   PENULISAN & PENERBITAN: 3D OVERLAPPING BOOK STACK, 3D POPUP MODAL & JOURNALS
    ========================================================================== */
 
-/* Section Styling */
+/* Section Container */
 .section-books-showcase {
   position: relative;
   overflow: hidden;
-  padding: 90px 0;
+  padding: 80px 0;
 }
 
 .books-stage-wrapper {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-/* 3D Overlapping Books Row */
+/* ==========================================================================
+   1. 3D OVERLAPPING BOOKS ROW (SHELF)
+   ========================================================================== */
+
 .books-shelf-row {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 40px 20px 60px 20px;
+  padding: 30px 20px 50px 20px;
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -31,34 +35,34 @@
 /* Individual Stacked Book Item */
 .stacked-book-item {
   position: relative;
-  width: 170px;
-  height: 240px;
-  margin-left: -32px; /* Overlap effect */
+  width: 160px;
+  height: 230px;
+  margin-left: -30px;
   cursor: pointer;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) translateZ(0);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1;
   user-select: none;
+  flex-shrink: 0;
 }
 
 .stacked-book-item:first-child {
   margin-left: 0;
 }
 
-/* 3D Book Structure */
+/* 3D Book Cover Card */
 .book-card-3d {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 4px 14px 14px 4px;
-  box-shadow: -12px 18px 30px rgba(0, 0, 0, 0.22), -3px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px 12px 12px 4px;
+  box-shadow: -10px 16px 28px rgba(0, 0, 0, 0.2), -2px 4px 8px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   background: #ffffff;
   transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Book Cover Image */
 .book-cover-img {
   width: 100%;
   height: 100%;
@@ -66,29 +70,29 @@
   display: block;
 }
 
-/* Realistic 3D Spine and Ridge */
+/* Realistic 3D Spine and Ridge Highlights */
 .book-spine-highlight {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18px;
+  width: 16px;
   height: 100%;
   background: linear-gradient(to right, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.15) 30%, rgba(255,255,255,0.2) 60%, rgba(0,0,0,0.05) 100%);
   z-index: 3;
   pointer-events: none;
 }
 
-/* Book Floating Hint Tag */
+/* Floating Hint Tag */
 .book-hover-pill {
   position: absolute;
-  bottom: -45px;
+  bottom: -40px;
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
+  transform: translateX(-50%) translateY(8px);
   background: var(--brand-indigo);
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
-  padding: 6px 12px;
+  padding: 5px 12px;
   border-radius: 20px;
   white-space: nowrap;
   opacity: 0;
@@ -109,42 +113,46 @@
   border-color: transparent transparent var(--brand-indigo) transparent;
 }
 
-/* Hover Interaction: Elevation & Straightening */
-.stacked-book-item:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-26px) scale(1.16);
-  z-index: 25;
-  margin-left: -10px;
-  margin-right: 25px;
+/* Hover Interaction on Desktop */
+@media (hover: hover) and (min-width: 901px) {
+  .stacked-book-item:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-24px) scale(1.15);
+    z-index: 25;
+    margin-left: -8px;
+    margin-right: 22px;
+  }
+
+  .stacked-book-item:hover .book-card-3d {
+    box-shadow: 0 24px 45px -8px rgba(0, 0, 0, 0.35), 0 0 25px rgba(79, 70, 229, 0.25);
+  }
+
+  .stacked-book-item:hover .book-hover-pill {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
-.stacked-book-item:hover .book-card-3d {
-  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.35), 0 0 25px rgba(79, 70, 229, 0.2);
-}
-
-.stacked-book-item:hover .book-hover-pill {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Subtle Stage Pedestal Reflection Line */
+/* Shelf Pedestal Line */
 .books-shelf-pedestal {
-  width: 92%;
-  max-width: 1100px;
-  height: 12px;
+  width: 90%;
+  max-width: 1050px;
+  height: 10px;
   background: linear-gradient(to bottom, rgba(203, 213, 225, 0.6), rgba(241, 245, 249, 0.1));
   border-radius: 50%;
   filter: blur(4px);
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 .books-caption-guide {
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 13.5px;
   color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 8px;
   font-weight: 500;
+  text-align: center;
+  padding: 0 16px;
 }
 
 .books-caption-guide span.spark-icon {
@@ -153,7 +161,7 @@
 }
 
 /* ==========================================================================
-   3D OPEN BOOK POPUP MODAL
+   2. 3D OPEN BOOK POPUP MODAL
    ========================================================================== */
 
 .open-book-modal-backdrop {
@@ -180,11 +188,10 @@
   pointer-events: auto;
 }
 
-/* Modal Stage with 3D Perspective */
 .open-book-modal-stage {
   perspective: 1800px;
   width: 100%;
-  max-width: 960px;
+  max-width: 940px;
   max-height: 90vh;
   display: flex;
   justify-content: center;
@@ -192,20 +199,20 @@
   position: relative;
 }
 
-/* The 3D Open Book */
+/* The Open Book Shell */
 .open-book-3d {
   width: 100%;
   display: grid;
-  grid-template-columns: 44% 56%;
+  grid-template-columns: 42% 58%;
   background: #fdfbf7;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
   overflow: hidden;
   position: relative;
-  transform: scale(0.85) rotateX(10deg);
+  transform: scale(0.88) rotateX(8deg);
   opacity: 0;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
-  min-height: 520px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  min-height: 500px;
 }
 
 .open-book-modal-backdrop.active .open-book-3d {
@@ -216,19 +223,19 @@
 /* Left Page (Cover & Meta) */
 .open-book-left-page {
   background: #f8fafc;
-  padding: 36px 30px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
   position: relative;
-  box-shadow: inset -15px 0 25px -10px rgba(0, 0, 0, 0.07);
+  box-shadow: inset -15px 0 25px -10px rgba(0, 0, 0, 0.06);
 }
 
 .book-preview-frame {
   width: 100%;
-  max-width: 220px;
+  max-width: 200px;
   aspect-ratio: 1 / 1.414;
   border-radius: 6px;
   overflow: hidden;
@@ -244,34 +251,33 @@
 }
 
 .book-meta-chips {
-  margin-top: 18px;
+  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   justify-content: center;
 }
 
 .book-chip {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 12px;
   background: rgba(79, 70, 229, 0.1);
   color: var(--brand-indigo);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 
 .btn-open-hd-cover {
-  margin-top: 14px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--brand-indigo);
   background: #ffffff;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  border: 1px solid rgba(79, 70, 229, 0.22);
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
@@ -286,118 +292,150 @@
   box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
 }
 
-/* Center Binding Spine Fold Effect */
+.btn-open-shop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #fe2c55 0%, #111827 100%);
+  border: 1px solid rgba(254, 44, 85, 0.4);
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(254, 44, 85, 0.3);
+  text-decoration: none;
+}
+
+.btn-open-shop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(254, 44, 85, 0.45);
+  filter: brightness(1.1);
+}
+
+.btn-open-shop.rak-buku {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border-color: rgba(2, 132, 199, 0.3);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+/* Center Binding Spine Fold */
 .open-book-spine-fold {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 44%;
-  width: 30px;
+  left: 42%;
+  width: 24px;
   transform: translateX(-50%);
-  background: linear-gradient(to right, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0.02) 60%, rgba(0,0,0,0.12) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.01) 40%, rgba(0,0,0,0.01) 60%, rgba(0,0,0,0.1) 100%);
   pointer-events: none;
   z-index: 5;
 }
 
-/* Right Page (Details & Highlights) */
+/* Right Page (Details & Synopsis) */
 .open-book-right-page {
   background: #ffffff;
-  padding: 36px 36px 36px 30px;
+  padding: 32px 32px 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  box-shadow: inset 15px 0 25px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 15px 0 25px -10px rgba(0, 0, 0, 0.04);
 }
 
 .book-details-header {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .book-badge-publisher {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: #c026d3;
   margin-bottom: 6px;
 }
 
 .book-modal-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.25;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   letter-spacing: -0.02em;
 }
 
 .book-modal-author {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--brand-indigo);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .book-modal-synopsis {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--text-body);
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .book-features-box {
   background: #f8fafc;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 14px;
   border: 1px solid var(--border-subtle);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .book-features-title {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-main);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .book-features-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .book-features-list li {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-body);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  line-height: 1.45;
 }
 
 .book-features-list li span.bullet-check {
   color: #10b981;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1;
+  margin-top: 2px;
 }
 
 /* Modal Close Button */
 .book-modal-close-btn {
   position: absolute;
-  top: 16px;
-  right: 18px;
-  width: 34px;
-  height: 34px;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
   background: #f1f5f9;
   border: 1px solid var(--border-subtle);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-muted);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -411,21 +449,20 @@
   transform: rotate(90deg);
 }
 
-/* Responsive Styles */
 /* ==========================================================================
-   ACADEMIC JOURNAL ARTICLES SECTION
+   3. ACADEMIC JOURNAL ARTICLES SECTION
    ========================================================================== */
 
 .journals-section-divider {
-  margin-top: 60px;
-  padding-top: 50px;
+  margin-top: 55px;
+  padding-top: 45px;
   border-top: 1px dashed rgba(203, 213, 225, 0.8);
   width: 100%;
 }
 
 .journals-subheading-wrap {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .journal-badge-category {
@@ -440,7 +477,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .journals-subtitle {
@@ -448,11 +485,11 @@
   font-weight: 800;
   color: var(--text-main);
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .journals-subdesc {
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--text-body);
   max-width: 680px;
   margin: 0 auto;
@@ -461,7 +498,7 @@
 .journals-grid-2col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -469,7 +506,7 @@
   background: #ffffff;
   border-radius: 16px;
   border: 1px solid rgba(226, 232, 240, 0.9);
-  padding: 24px;
+  padding: 22px;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -491,19 +528,19 @@
 }
 
 .journal-paper-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.1), 0 10px 15px -5px rgba(16, 185, 129, 0.1);
   border-color: rgba(16, 185, 129, 0.4);
 }
 
 .journal-card-top {
   display: flex;
-  gap: 20px;
-  margin-bottom: 18px;
+  gap: 18px;
+  margin-bottom: 16px;
 }
 
 .journal-thumb-frame {
-  width: 110px;
+  width: 100px;
   flex-shrink: 0;
   aspect-ratio: 1 / 1.35;
   border-radius: 8px;
@@ -528,11 +565,11 @@
 
 .journal-thumb-zoom {
   position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 5px;
+  right: 5px;
   background: rgba(15, 23, 42, 0.85);
   color: #ffffff;
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 700;
   padding: 2px 6px;
   border-radius: 4px;
@@ -541,14 +578,15 @@
 
 .journal-card-content {
   flex: 1;
+  min-width: 0; /* Prevents flex children from overflowing text */
 }
 
 .journal-meta-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
 .journal-source-badge {
@@ -556,39 +594,41 @@
   font-weight: 800;
   color: #0284c7;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .journal-issn-chip {
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--text-muted);
   background: #f1f5f9;
-  padding: 2px 8px;
+  padding: 2px 7px;
   border-radius: 6px;
 }
 
 .journal-article-title {
-  font-size: 16.5px;
+  font-size: 15.5px;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.35;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   letter-spacing: -0.01em;
+  word-wrap: break-word;
 }
 
 .journal-authors {
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--brand-indigo);
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
+  word-wrap: break-word;
 }
 
 .journal-affiliation {
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--text-muted);
   font-style: italic;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .journal-abstract-box {
@@ -596,11 +636,11 @@
   border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 12px 14px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .journal-abstract-text {
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--text-body);
   line-height: 1.55;
 }
@@ -608,17 +648,17 @@
 .journal-metrics-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-top: 10px;
 }
 
 .journal-metric-pill {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   color: #065f46;
   background: rgba(16, 185, 129, 0.12);
-  padding: 3px 9px;
-  border-radius: 8px;
+  padding: 3px 8px;
+  border-radius: 6px;
 }
 
 .journal-actions-row {
@@ -626,46 +666,20 @@
   align-items: center;
   gap: 10px;
   border-top: 1px solid var(--border-subtle);
-  padding-top: 16px;
-.btn-open-shop {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: #ffffff !important;
-  background: linear-gradient(135deg, #fe2c55 0%, #111827 100%);
-  border: 1px solid rgba(254, 44, 85, 0.4);
-  padding: 8px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(254, 44, 85, 0.3);
-  text-decoration: none;
-}
-
-.btn-open-shop:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(254, 44, 85, 0.45);
-  filter: brightness(1.1);
-}
-
-.btn-open-shop.rak-buku {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  border-color: rgba(2, 132, 199, 0.3);
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  padding-top: 14px;
+  margin-top: auto;
 }
 
 .btn-journal-view {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 7px 15px;
   border-radius: 9999px;
   background: rgba(16, 185, 129, 0.1);
   color: #059669 !important;
   border: 1px solid rgba(16, 185, 129, 0.25);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -683,12 +697,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 7px 15px;
   border-radius: 9999px;
   background: #f8fafc;
   color: var(--text-body) !important;
   border: 1px solid var(--border-subtle);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   transition: all 0.2s ease;
   text-decoration: none;
@@ -701,17 +715,178 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 860px) {
-  .journals-grid-2col {
-    grid-template-columns: 1fr;
+/* ==========================================================================
+   4. RESPONSIVE OPTIMIZATIONS (TABLETS & MOBILE PORTRAIT / LANDSCAPE)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  /* Book Shelf on Mobile & Tablet */
+  .books-shelf-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 20px 16px 40px 16px;
+    gap: 14px;
+    perspective: none;
   }
-  .journal-card-top {
-    flex-direction: column;
+
+  .books-shelf-row::-webkit-scrollbar {
+    height: 6px;
   }
-  .journal-thumb-frame {
+  .books-shelf-row::-webkit-scrollbar-track {
+    background: rgba(226, 232, 240, 0.5);
+    border-radius: 3px;
+  }
+  .books-shelf-row::-webkit-scrollbar-thumb {
+    background: var(--brand-indigo);
+    border-radius: 3px;
+  }
+
+  .stacked-book-item {
+    margin-left: 0 !important;
+    transform: none !important;
+    width: 140px;
+    height: 200px;
+    scroll-snap-align: center;
+  }
+
+  .stacked-book-item .book-card-3d {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .stacked-book-item .book-hover-pill {
+    opacity: 1;
+    position: static;
+    transform: none;
+    margin-top: 8px;
     width: 100%;
-    max-width: 180px;
+    text-align: center;
+    font-size: 10px;
+    padding: 3px 6px;
+    box-shadow: none;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  .stacked-book-item .book-hover-pill::after {
+    display: none;
+  }
+
+  .books-shelf-pedestal {
+    display: none;
+  }
+
+  /* 3D Modal on Mobile & Tablet */
+  .open-book-modal-backdrop {
+    padding: 12px;
+  }
+
+  .open-book-modal-stage {
+    width: 100%;
+    max-height: 94vh;
+  }
+
+  .open-book-3d {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: auto;
+    transform: none !important;
+  }
+
+  .open-book-spine-fold {
+    display: none !important;
+  }
+
+  .open-book-left-page {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 24px 16px 18px 16px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .book-preview-frame {
+    max-width: 150px;
+  }
+
+  .open-book-right-page {
+    padding: 20px 16px 24px 16px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .book-modal-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .book-modal-synopsis {
+    font-size: 13px;
+  }
+
+  /* Journal Cards on Mobile & Tablet */
+  .journals-grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .journal-paper-card {
+    padding: 18px 16px;
+    width: 100%;
+  }
+
+  .journal-card-top {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .journal-thumb-frame {
+    width: 120px !important;
     margin: 0 auto;
   }
-}
 
+  .journal-meta-row {
+    justify-content: center;
+  }
+
+  .journal-article-title {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .journal-authors {
+    text-align: center;
+  }
+
+  .journal-affiliation {
+    text-align: center;
+  }
+
+  .journal-abstract-box {
+    text-align: left;
+  }
+
+  .journal-metrics-row {
+    justify-content: center;
+  }
+
+  .journal-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn-journal-view,
+  .btn-journal-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 9px 14px;
+  }
+}
