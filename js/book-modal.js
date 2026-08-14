@@ -80,16 +80,17 @@
       title: "Rona-Rona Pendidik: Anekdot Edufluencers",
       subtitle: "Karya Penulisan Inspirasi Guru Negeri Perak",
       author: "Abdul Halim bin Roslan (Penulis Bersama Edufluencers JPN Perak)",
-      publisher: "Sektor Pembelajaran, Jabatan Pendidikan Negeri Perak",
+      publisher: "Syahida Hassan Enterprise",
+      publisherUrl: "https://rakbukushe.com/",
       year: "2026",
       category: "Buku Penulisan Ilmiah & Anekdot Pendidikan",
       cover: "assets/books/book_anekdot_perak.png",
-      synopsis: "Buku antologi anekdot rasmi anjuran Jabatan Pendidikan Negeri Perak yang menghimpunkan kisah inspirasi, perjuangan dan amalan pedagogi kreatif guru-guru terpilih di bawah komuniti Edufluencers KPM Negeri Perak.",
+      synopsis: "Buku antologi anekdot rasmi anjuran komuniti Edufluencers yang diterbitkan oleh Syahida Hassan Enterprise. Menghimpunkan kisah inspirasi, perjuangan dan amalan pedagogi kreatif guru-guru terpilih di bawah komuniti Edufluencers KPM Negeri Perak.",
       features: [
-        "Diterbitkan oleh Jabatan Pendidikan Negeri (JPN) Perak",
+        "Penerbit: Syahida Hassan Enterprise (rakbukushe.com)",
+        "Inisiatif Komuniti Edufluencers KPM Negeri Perak",
         "Dokumentasi naratif inspirasi transformasi bilik darjah",
-        "Perkongsian amalan terbaik pendidik digital dan inovator",
-        "Menjadi bahan rujukan pembudayaan pedagogi kreatif negeri"
+        "Perkongsian amalan terbaik pendidik digital dan inovator"
       ]
     }
   ];
@@ -128,12 +129,24 @@
     const synopsisEl = document.getElementById('modal-book-synopsis');
     const featuresList = document.getElementById('modal-book-features');
     const btnHd = document.getElementById('modal-book-btn-hd');
+    const publisherLinkEl = document.getElementById('modal-book-publisher-link');
 
     if (coverImg) coverImg.src = book.cover;
-    if (chipPublisher) chipPublisher.textContent = book.publisher;
+    if (chipPublisher) {
+      chipPublisher.textContent = book.publisher;
+      if (book.publisherUrl) {
+        chipPublisher.innerHTML = `<a href="${book.publisherUrl}" target="_blank" style="color: inherit; text-decoration: underline;">${book.publisher} ↗</a>`;
+      }
+    }
     if (chipYear) chipYear.textContent = `Tahun ${book.year}`;
     if (chipCategory) chipCategory.textContent = book.category;
-    if (publisherTag) publisherTag.textContent = `${book.publisher} • ${book.year}`;
+    if (publisherTag) {
+      if (book.publisherUrl) {
+        publisherTag.innerHTML = `<a href="${book.publisherUrl}" target="_blank" style="color: inherit; text-decoration: none;">${book.publisher.toUpperCase()} ↗</a> • ${book.year}`;
+      } else {
+        publisherTag.textContent = `${book.publisher} • ${book.year}`;
+      }
+    }
     if (titleEl) titleEl.textContent = book.title;
     if (authorEl) authorEl.textContent = `✍️ ${book.author}`;
     if (synopsisEl) synopsisEl.textContent = book.synopsis;
@@ -142,7 +155,11 @@
       featuresList.innerHTML = '';
       book.features.forEach(f => {
         const li = document.createElement('li');
-        li.innerHTML = `<span class="bullet-check">✓</span><span>${f}</span>`;
+        if (f.includes('rakbukushe.com') && book.publisherUrl) {
+          li.innerHTML = `<span class="bullet-check">✓</span><span>Penerbit: <a href="${book.publisherUrl}" target="_blank" style="color: var(--brand-indigo); font-weight: 700; text-decoration: underline;">Syahida Hassan Enterprise (rakbukushe.com) ↗</a></span>`;
+        } else {
+          li.innerHTML = `<span class="bullet-check">✓</span><span>${f}</span>`;
+        }
         featuresList.appendChild(li);
       });
     }
