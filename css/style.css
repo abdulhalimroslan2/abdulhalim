@@ -1,50 +1,45 @@
 /* ==========================================================================
    PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
-   STRIPE.COM DESIGN SYSTEM & GLOBAL STYLES
+   STRIPE-INSPIRED DESIGN SYSTEM & ROADMAP NAVIGATION
    ========================================================================== */
 
 :root {
-  /* Stripe Primary Brand Colors */
-  --stripe-blurple: #635bff;
-  --stripe-blurple-hover: #5851ea;
-  --stripe-blurple-light: #f0f3ff;
-  --stripe-dark: #0a2540;
-  --stripe-dark-card: #102a45;
-  --stripe-cyan: #00d4ff;
-  --stripe-violet: #7928ca;
-  --stripe-coral: #ff5a5f;
-  --stripe-emerald: #00d97e;
-  --stripe-amber: #ffc107;
+  /* Brand Palette from Uploaded Mockup */
+  --brand-primary: #4338ca;
+  --brand-primary-light: #6366f1;
+  --brand-indigo: #4f46e5;
+  --brand-blue: #2563eb;
+  --brand-cyan: #06b6d4;
+  --brand-purple: #9333ea;
+  --brand-coral: #f43f5e;
+  --brand-amber: #f59e0b;
+  --brand-emerald: #10b981;
 
-  /* Neutral & Canvas Colors */
-  --bg-canvas: #f6f9fc;
+  /* Backgrounds & Text */
+  --bg-page: #f8fafc;
   --bg-white: #ffffff;
-  --bg-dark-section: #0a2540;
-  --bg-dark-card: #153353;
-  --text-dark: #0a2540;
-  --text-slate: #425466;
-  --text-muted: #6b7c93;
-  --text-light: #adbdcc;
-  --text-white: #ffffff;
-  --border-light: #e6ebf1;
-  --border-dark: rgba(255, 255, 255, 0.12);
+  --bg-quote: #f0f4ff;
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --border-subtle: #e2e8f0;
+  --border-focus: #c7d2fe;
 
   /* Typography */
-  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Stripe Elevation & Shadows */
-  --stripe-shadow-sm: 0 2px 5px rgba(50, 50, 93, 0.08), 0 1px 1.5px rgba(0, 0, 0, 0.05);
-  --stripe-shadow-md: 0 6px 12px -2px rgba(50, 50, 93, 0.15), 0 3px 7px -3px rgba(0, 0, 0, 0.18);
-  --stripe-shadow-lg: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
-  --stripe-shadow-hover: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3);
-  --stripe-shadow-neon: 0 0 30px rgba(99, 91, 255, 0.35);
+  /* Shadows */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 12px 30px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  --shadow-pill: 0 4px 14px rgba(79, 70, 229, 0.3);
 
   /* Border Radii */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-pill: 9999px;
 
   /* Transitions */
@@ -53,7 +48,6 @@
   --trans-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Global Reset */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -62,9 +56,9 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-main);
-  background-color: var(--bg-canvas);
-  color: var(--text-slate);
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -72,6 +66,7 @@ html {
 body {
   overflow-x: hidden;
   line-height: 1.6;
+  background: var(--bg-page);
 }
 
 a {
@@ -99,394 +94,233 @@ img {
 }
 
 /* ==========================================================================
-   STRIPE NAVIGATION BAR
+   EXACT TOP NAVIGATION BAR
    ========================================================================== */
 
-.stripe-nav {
+.mockup-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.88);
+  height: 70px;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  transition: background var(--trans-normal), box-shadow var(--trans-normal);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
 }
 
-.stripe-nav.scrolled {
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: var(--stripe-shadow-sm);
-}
-
-.stripe-nav .container {
+.mockup-nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
 }
 
-.stripe-logo-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 19px;
+.nav-brand-title {
+  font-size: 20px;
   font-weight: 800;
-  color: var(--stripe-dark);
-  letter-spacing: -0.03em;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
 }
 
-.stripe-logo-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--stripe-blurple), var(--stripe-cyan));
+.nav-links-menu {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 900;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(99, 91, 255, 0.3);
-}
-
-.stripe-nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+  gap: 24px;
   list-style: none;
 }
 
-.stripe-nav-link {
+.nav-item-link {
   font-size: 14.5px;
   font-weight: 600;
-  color: var(--text-slate);
+  color: var(--text-muted);
+  padding: 8px 2px;
+  position: relative;
   transition: color var(--trans-fast);
 }
 
-.stripe-nav-link:hover {
-  color: var(--stripe-blurple);
+.nav-item-link:hover {
+  color: var(--brand-indigo);
 }
 
-.stripe-btn-pill {
+.nav-item-link.active {
+  color: var(--brand-indigo);
+  font-weight: 700;
+}
+
+.nav-item-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--brand-indigo);
+  border-radius: 3px 3px 0 0;
+}
+
+.nav-juri-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 9px 20px;
-  border-radius: var(--radius-pill);
-  background: var(--stripe-blurple);
+  background: var(--brand-indigo);
   color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(99, 91, 255, 0.25);
-  transition: transform var(--trans-fast), background var(--trans-fast), box-shadow var(--trans-fast);
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 700;
+  box-shadow: var(--shadow-pill);
+  transition: all var(--trans-fast);
 }
 
-.stripe-btn-pill:hover {
-  background: var(--stripe-blurple-hover);
+.nav-juri-btn:hover {
+  background: var(--brand-primary);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(99, 91, 255, 0.35);
-}
-
-.stripe-btn-pill-ghost {
-  background: transparent;
-  color: var(--stripe-dark);
-  border: 1px solid var(--border-light);
-  box-shadow: none;
-}
-
-.stripe-btn-pill-ghost:hover {
-  background: rgba(0, 0, 0, 0.04);
-  transform: translateY(-1px);
-  color: var(--stripe-blurple);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
 }
 
 /* ==========================================================================
-   STRIPE HERO BACKGROUND & MESH GRADIENT CANVAS
+   PROFILE HERO WITH FLUID WAVE RIBBON BACKGROUND
    ========================================================================== */
 
-.stripe-hero-wrapper {
+.profile-section-hero {
   position: relative;
-  padding-top: 130px;
-  padding-bottom: 120px;
-  background: var(--bg-canvas);
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background: #ffffff;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Iconic Stripe Skewed Gradient Mesh */
-.stripe-mesh-gradient {
+/* Stripe fluid wave gradient in top-right */
+.profile-fluid-ribbon {
   position: absolute;
-  top: -150px;
-  left: -20%;
-  right: -20%;
-  height: 580px;
+  top: -50px;
+  right: -100px;
+  width: 750px;
+  height: 600px;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(99, 91, 255, 0.75) 0%, transparent 50%),
-    radial-gradient(circle at 55% 20%, rgba(0, 212, 255, 0.7) 0%, transparent 45%),
-    radial-gradient(circle at 80% 40%, rgba(121, 40, 202, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 35% 80%, rgba(255, 90, 95, 0.65) 0%, transparent 45%),
-    radial-gradient(circle at 70% 85%, rgba(255, 193, 7, 0.6) 0%, transparent 45%);
-  transform: skewY(-6deg);
-  transform-origin: top left;
-  filter: blur(40px);
-  opacity: 0.85;
+    radial-gradient(ellipse at 70% 30%, rgba(244, 63, 94, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 40%, rgba(147, 51, 234, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 60%, rgba(6, 182, 212, 0.4) 0%, transparent 45%),
+    radial-gradient(ellipse at 60% 80%, rgba(245, 158, 11, 0.35) 0%, transparent 50%);
+  filter: blur(55px);
   pointer-events: none;
   z-index: 1;
-  animation: stripeMeshFloat 12s ease-in-out infinite alternate;
+  opacity: 0.85;
 }
 
-@keyframes stripeMeshFloat {
-  0% { transform: skewY(-6deg) scale(1) translate(0, 0); }
-  50% { transform: skewY(-5.5deg) scale(1.04) translate(15px, -10px); }
-  100% { transform: skewY(-6deg) scale(1) translate(-15px, 10px); }
-}
-
-.stripe-hero-grid {
+.profile-hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-bottom: 40px;
 }
 
-.stripe-pill-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 91, 255, 0.2);
-  color: var(--stripe-blurple);
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(99, 91, 255, 0.12);
-  margin-bottom: 24px;
-}
-
-.stripe-hero-title {
-  font-size: clamp(40px, 4.8vw, 68px);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: var(--stripe-dark);
-  margin-bottom: 22px;
-}
-
-.stripe-gradient-text {
-  background: linear-gradient(135deg, var(--stripe-blurple) 0%, var(--stripe-violet) 50%, var(--stripe-coral) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stripe-hero-subhead {
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--text-slate);
-  margin-bottom: 36px;
-  max-width: 580px;
-}
-
-.stripe-hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* ==========================================================================
-   STRIPE 3D HERO STAGE & FLOATING CARDS
-   ========================================================================== */
-
-.stripe-stage-card {
+/* Candidate Photo Card */
+.profile-portrait-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: var(--radius-xl);
-  padding: 24px;
-  box-shadow: var(--stripe-shadow-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stripe-standing-frame {
   width: 100%;
-  height: 480px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%);
+  border: 4px solid #ffffff;
 }
 
-.stripe-standing-img {
+.profile-portrait-img {
+  width: 100%;
   height: 100%;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 15px 30px rgba(10, 37, 64, 0.25));
-  z-index: 2;
+  object-fit: cover;
+  object-position: top center;
   transition: transform var(--trans-smooth);
 }
 
-.stripe-stage-card:hover .stripe-standing-img {
-  transform: scale(1.02);
+.profile-portrait-card:hover .profile-portrait-img {
+  transform: scale(1.03);
 }
 
-/* Floating Badges */
-.floating-stat-badge {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 12px 18px;
-  box-shadow: var(--stripe-shadow-md);
-  z-index: 3;
+/* Candidate Info Text Block */
+.profile-info-block {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  animation: floatCard 4s ease-in-out infinite alternate;
+  flex-direction: column;
 }
 
-.badge-top-left {
-  top: 24px;
-  left: -20px;
-}
-
-.badge-bottom-right {
-  bottom: 30px;
-  right: -20px;
-  animation-delay: 2s;
-}
-
-@keyframes floatCard {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-8px); }
-}
-
-.stat-badge-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: var(--stripe-blurple-light);
-  color: var(--stripe-blurple);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.stat-badge-val {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--stripe-dark);
-}
-
-.stat-badge-lbl {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-/* ==========================================================================
-   STRIPE TRUST BAR (INSTITUTIONAL LOGO CLOUD)
-   ========================================================================== */
-
-.stripe-trust-bar {
-  padding: 32px 0;
-  border-bottom: 1px solid var(--border-light);
-  background: #ffffff;
-}
-
-.trust-bar-label {
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
+.profile-eyebrow-tag {
+  font-size: 12.5px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-muted);
-  margin-bottom: 20px;
+  color: var(--brand-indigo);
+  margin-bottom: 8px;
 }
 
-.trust-logos-row {
+.profile-main-name {
+  font-size: clamp(32px, 3.8vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.profile-role-subtitle {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.profile-meta-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.profile-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+.meta-icon-wrapper {
+  color: var(--brand-indigo);
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 36px;
-  flex-wrap: wrap;
 }
 
-.trust-logo-item {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-muted);
+/* Lavender Quote Box */
+.profile-quote-card {
+  background: var(--bg-quote);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: color var(--trans-fast);
+  gap: 14px;
 }
 
-.trust-logo-item:hover {
-  color: var(--stripe-dark);
+.quote-symbol {
+  font-size: 28px;
+  line-height: 1;
+  color: var(--brand-indigo);
+  font-family: Georgia, serif;
 }
 
-/* ==========================================================================
-   STRIPE SECTION HEADINGS
-   ========================================================================== */
-
-.section {
-  padding: 96px 0;
-  position: relative;
-}
-
-.section-dark {
-  background-color: var(--bg-dark-section);
-  color: var(--text-white);
-}
-
-.stripe-section-eyebrow {
+.quote-text-content {
   font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--stripe-blurple);
-  margin-bottom: 12px;
-}
-
-.section-dark .stripe-section-eyebrow {
-  color: var(--stripe-cyan);
-}
-
-.stripe-section-title {
-  font-size: clamp(30px, 3.4vw, 44px);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--stripe-dark);
-  margin-bottom: 16px;
-}
-
-.section-dark .stripe-section-title {
-  color: var(--text-white);
-}
-
-.stripe-section-desc {
-  font-size: 18px;
-  color: var(--text-slate);
-  max-width: 680px;
-  line-height: 1.55;
-  margin-bottom: 48px;
-}
-
-.section-dark .stripe-section-desc {
-  color: var(--text-light);
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.45;
 }

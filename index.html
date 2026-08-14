@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Halim bin Roslan — Pencipta Kandungan Digital 2026</title>
-  <meta name="description" content="Portal Rasmi Pencalonan Abdul Halim bin Roslan bagi Anugerah Khas Pendidikan: Pencipta Kandungan Digital Sempena Majlis Apresiasi Guru Negeri Perak 2026.">
+  <title>Profil Calon — Abdul Halim bin Roslan | Pencipta Kandungan Digital 2026</title>
+  <meta name="description" content="Profil Rasmi Pencalonan Abdul Halim bin Roslan bagi Anugerah Khas Pendidikan: Pencipta Kandungan Digital Sempena Majlis Apresiasi Guru Negeri Perak 2026.">
   
-  <!-- Stripe Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Modern Typography: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-  <!-- Stripe Stylesheets -->
+  <!-- Core Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
@@ -19,509 +19,228 @@
 <body>
 
   <!-- ==========================================================================
-       1. STRIPE NAVIGATION BAR (64px)
+       1. NAVIGATION BAR (EXACT MOCKUP HEADER)
        ========================================================================== -->
-  <nav class="stripe-nav">
+  <nav class="mockup-nav">
     <div class="container">
-      <a href="#hero" class="stripe-logo-brand">
-        <div class="stripe-logo-icon">⚡</div>
-        <span>Inovasi Digital</span>
+      <a href="#profil" class="nav-brand-title">
+        Profil Calon
       </a>
 
-      <ul class="stripe-nav-menu">
-        <li><a href="#hero" class="stripe-nav-link">Profil</a></li>
-        <li><a href="#posters-showcase" class="stripe-nav-link">Poster Inovasi</a></li>
-        <li><a href="#ekosistem" class="stripe-nav-link">Ekosistem</a></li>
-        <li><a href="#deepdive" class="stripe-nav-link">Aplikasi Live</a></li>
-        <li><a href="#studio" class="stripe-nav-link">Studio Makmal</a></li>
-        <li><a href="#pencapaian" class="stripe-nav-link">Pencapaian</a></li>
-        <li><a href="#penerbitan" class="stripe-nav-link">Penerbitan</a></li>
-        <li><a href="#pustaka" class="stripe-nav-link">Pustaka 96 M/S</a></li>
+      <ul class="nav-links-menu">
+        <li><a href="#profil" class="nav-item-link active">Profil</a></li>
+        <li><a href="#anugerah" class="nav-item-link">Anugerah</a></li>
+        <li><a href="#antarabangsa" class="nav-item-link">Antarabangsa</a></li>
+        <li><a href="#kebangsaan" class="nav-item-link">Kebangsaan</a></li>
+        <li><a href="#negeri" class="nav-item-link">Negeri</a></li>
+        <li><a href="#daerah" class="nav-item-link">Daerah & Institusi</a></li>
+        <li><a href="#bahan-digital" class="nav-item-link">Bahan Digital ▾</a></li>
+        <li><a href="#video" class="nav-item-link">Video</a></li>
       </ul>
 
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <a href="#cinema" class="stripe-btn-pill">
-          <span>Tonton Video →</span>
+      <div>
+        <a href="#pustaka" class="nav-juri-btn" onclick="window.openDarkroomLightbox(1, 'M/S 1: Muka Depan Rasmi Borang Pencalonan')">
+          <span>🔒 Log Masuk Juri</span>
         </a>
       </div>
     </div>
   </nav>
 
   <!-- ==========================================================================
-       2. STRIPE 2-COLUMN SPLIT HERO WITH SKEWED MESH GRADIENT
+       2. BAHAGIAN PROFIL CALON (EXACT MOCKUP MAIN HERO)
        ========================================================================== -->
-  <header class="stripe-hero-wrapper" id="hero">
-    <!-- Iconic Stripe Skewed Gradient Ribbon -->
-    <div class="stripe-mesh-gradient"></div>
+  <section class="profile-section-hero" id="profil">
+    <!-- Stripe-style Abstract Fluid Gradient Ribbon (Top Right) -->
+    <div class="profile-fluid-ribbon"></div>
 
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="stripe-hero-grid">
+    <div class="container">
+      
+      <!-- Top Row: Candidate Portrait & Main Info -->
+      <div class="profile-hero-grid stripe-reveal">
         
-        <!-- Left Column: Copy & Value Proposition -->
-        <div class="stripe-reveal">
-          <div class="stripe-pill-badge">
-            <span>⚡</span>
-            <span>Anugerah Khas Pendidikan • Pencipta Kandungan Digital 2026</span>
-          </div>
-
-          <h1 class="stripe-hero-title">
-            Prasarana digital untuk <span class="stripe-gradient-text">memperkasakan pendidikan masa depan.</span>
-          </h1>
-
-          <p class="stripe-hero-subhead">
-            Enam ekosistem pintar, makmal maya 3D, automasi pengajaran AI, dan analisis berketepatan tinggi dibina oleh <strong>Abdul Halim bin Roslan</strong> (SMK Agama Kerian, Perak) bagi merevolusikan pembelajaran murid dan pengurusan pendidik.
-          </p>
-
-          <div class="stripe-hero-actions">
-            <a href="#posters-showcase" class="stripe-btn-pill" style="padding: 12px 28px; font-size: 15.5px;">
-              <span>Teroka 5 Poster Inovasi →</span>
-            </a>
-            <a href="#cinema" class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 12px 24px; font-size: 15.5px;">
-              <span>Tonton Video Persembahan ↗</span>
-            </a>
-          </div>
+        <!-- Left: Candidate Portrait Card -->
+        <div class="profile-portrait-card" title="Klik untuk paparan penuh" onclick="window.openPosterLightbox('assets/images/halim_portrait_hd.png', 'Abdul Halim bin Roslan — Guru Cemerlang Fizik')">
+          <img src="assets/images/halim_portrait_hd.png" alt="Abdul Halim bin Roslan" class="profile-portrait-img">
         </div>
 
-        <!-- Right Column: 3D Stage with Standing Portrait & Floating Metric Chips -->
-        <div class="stripe-reveal stripe-reveal-delay-1">
-          <div class="stripe-stage-card">
-            
-            <!-- Floating Stat Chip Top-Left -->
-            <div class="floating-stat-badge badge-top-left">
-              <div class="stat-badge-icon">🏆</div>
-              <div>
-                <div class="stat-badge-val">PINGAT EMAS</div>
-                <div class="stat-badge-lbl">IIEF Antarabangsa 2025</div>
-              </div>
-            </div>
+        <!-- Right: Candidate Info Block -->
+        <div class="profile-info-block">
+          <div class="profile-eyebrow-tag">PROFIL CALON</div>
+          <h1 class="profile-main-name">Abdul Halim bin Roslan</h1>
+          <p class="profile-role-subtitle">Guru Cemerlang Fizik | Pencipta Kandungan Digital | Penggerak Inovasi Pendidikan</p>
 
-            <!-- Standing Candidate Visual -->
-            <div class="stripe-standing-frame">
-              <img src="assets/images/halim_standing_full.png" alt="Abdul Halim bin Roslan" class="stripe-standing-img" onerror="this.src='assets/images/halim_portrait_hd.png'">
+          <!-- Meta Items with Icons -->
+          <div class="profile-meta-list">
+            <div class="profile-meta-item">
+              <span class="meta-icon-wrapper">👤</span>
+              <span>Guru Fizik</span>
             </div>
-
-            <!-- Floating Stat Chip Bottom-Right -->
-            <div class="floating-stat-badge badge-bottom-right">
-              <div class="stat-badge-icon" style="background: rgba(0, 212, 255, 0.15); color: #0088cc;"></div>
-              <div>
-                <div class="stat-badge-val">16+ Tahun</div>
-                <div class="stat-badge-lbl">Apple Learning Coach</div>
-              </div>
+            <div class="profile-meta-item">
+              <span class="meta-icon-wrapper">🏛️</span>
+              <span>SMK Agama Kerian, Perak</span>
             </div>
+            <div class="profile-meta-item">
+              <span class="meta-icon-wrapper">✉️</span>
+              <span>abdulhalim@smkakerian.edu.my</span>
+            </div>
+            <div class="profile-meta-item">
+              <span class="meta-icon-wrapper">📍</span>
+              <span>Kerian, Perak, Malaysia</span>
+            </div>
+          </div>
 
+          <!-- Lavender Quote Box -->
+          <div class="profile-quote-card">
+            <div class="quote-symbol">❝</div>
+            <div class="quote-text-content">
+              Memperkasa pendidikan digital, mencipta impak berterusan untuk pembelajaran yang lebih bermakna.
+            </div>
           </div>
         </div>
 
       </div>
-    </div>
-  </header>
 
-  <!-- ==========================================================================
-       3. STRIPE INSTITUTIONAL TRUST BAR
-       ========================================================================== -->
-  <div class="stripe-trust-bar">
-    <div class="container">
-      <div class="trust-bar-label">Pengesahan, Penyelidikan & Kerjasama Institusi</div>
-      <div class="trust-logos-row">
-        <div class="trust-logo-item">🏛️ KPM Malaysia</div>
-        <div class="trust-logo-item">🏫 JPN Perak</div>
-        <div class="trust-logo-item">🎓 SMKA Kerian</div>
-        <div class="trust-logo-item">🔬 UKM Bangi</div>
-        <div class="trust-logo-item">🧪 USM Pulau Pinang</div>
-        <div class="trust-logo-item">🏅 Kolej MARA Kulim</div>
-        <div class="trust-logo-item"> Apple South East Asia</div>
+      <!-- Floating 5-Metric Stats Bar -->
+      <div class="profile-stats-bar stripe-reveal stripe-reveal-delay-1">
+        <div class="stat-item-col">
+          <div class="stat-icon-circ">⭐</div>
+          <div>
+            <div class="stat-num-val">18+</div>
+            <div class="stat-label-desc">Tahun Pengalaman</div>
+          </div>
+        </div>
+
+        <div class="stat-item-col">
+          <div class="stat-icon-circ">🎓</div>
+          <div>
+            <div class="stat-num-val">25,000+</div>
+            <div class="stat-label-desc">Murid Dibimbing</div>
+          </div>
+        </div>
+
+        <div class="stat-item-col">
+          <div class="stat-icon-circ">📑</div>
+          <div>
+            <div class="stat-num-val">120+</div>
+            <div class="stat-label-desc">Bahan Digital Dihasilkan</div>
+          </div>
+        </div>
+
+        <div class="stat-item-col">
+          <div class="stat-icon-circ">🌐</div>
+          <div>
+            <div class="stat-num-val">15+</div>
+            <div class="stat-label-desc">Program & Projek</div>
+          </div>
+        </div>
+
+        <div class="stat-item-col">
+          <div class="stat-icon-circ">🚀</div>
+          <div>
+            <div class="stat-num-val">1</div>
+            <div class="stat-label-desc">Matlamat: Pendidikan Berkualiti</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- ==========================================================================
-       4. GALERI 5 POSTER RASMI INOVASI (STRIPE BENTO CARDS)
-       ========================================================================== -->
-  <section class="section" id="posters-showcase">
-    <div class="container">
-      
-      <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">DOKUMENTASI VISUAL RASMI</div>
-        <h2 class="stripe-section-title">5 Infografik Inovasi. <span class="stripe-gradient-text">Visual Berdefinisi Tinggi.</span></h2>
-        <p class="stripe-section-desc">
-          Klik pada mana-mana poster rasmi untuk melihat reka bentuk penuh dalam paparan resolusi tinggi berserta spesifikasi lengkap.
-        </p>
-      </div>
-
-      <div class="stripe-bento-grid">
+      <!-- 3-Column Bento Cards -->
+      <div class="profile-bento-row stripe-reveal stripe-reveal-delay-2">
         
-        <!-- Poster 1: My Physics Tutor (Span 8) -->
-        <div class="stripe-bento-card bento-span-8 stripe-reveal">
+        <!-- Card 1: Tentang Saya -->
+        <div class="profile-bento-card">
           <div>
-            <div class="bento-card-eyebrow">HAB MAKMAL MAYA 3D</div>
-            <h3 class="bento-card-title">My Physics Tutor</h3>
-            <p class="bento-card-desc">
-              "Belajar Fizik dengan lebih mudah, interaktif & berkesan." Menghubungkan simulasi 3D interaktif, makmal amali wajib Fizik, pentaksiran kendiri, dan bimbingan kepakaran Sir Halim.
+            <div class="bento-header-title">
+              <span class="bento-header-icon">👤</span>
+              <span>Tentang Saya</span>
+            </div>
+            <p class="bento-paragraph-text">
+              Seorang pendidik yang bersemangat dalam bidang pendidikan Fizik dan teknologi digital. Komited untuk menghasilkan bahan pembelajaran inovatif yang menyeronokkan, interaktif dan berimpak tinggi kepada murid dan komuniti pendidik.
             </p>
           </div>
-          <div class="bento-poster-preview" onclick="window.openPosterLightbox('assets/posters/myphysicstutor_poster_hd.png', 'My Physics Tutor — Belajar Fizik dengan lebih mudah, interaktif & berkesan.')">
-            <img src="assets/posters/myphysicstutor_poster_hd.png" alt="My Physics Tutor Poster" class="bento-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
+          <a href="#pustaka" class="bento-action-link" onclick="window.openDarkroomLightbox(2, 'M/S 2: Borang Pencalonan & Biodata Calon')">
+            <span>Lihat selengkapnya</span>
+            <span>›</span>
+          </a>
         </div>
 
-        <!-- Poster 2: PhysPlot AI (Span 4) -->
-        <div class="stripe-bento-card bento-span-4 stripe-reveal stripe-reveal-delay-1">
+        <!-- Card 2: Fokus Kepakaran -->
+        <div class="profile-bento-card">
           <div>
-            <div class="bento-card-eyebrow" style="color: var(--stripe-cyan);">ENJIN GRAF SAINS</div>
-            <h3 class="bento-card-title">PhysPlot AI</h3>
-            <p class="bento-card-desc">
-              Precision Science Graph Engine with 3D Robot Tutor. Panduan simulasi 7 langkah mengikut rubrik penskoran Kertas 3 SPM.
-            </p>
-          </div>
-          <div class="bento-poster-preview" onclick="window.openPosterLightbox('assets/posters/physplot_poster_hd.png', 'PhysPlot AI — Enjin Pemplotan Graf Berketepatan Tinggi SPM')">
-            <img src="assets/posters/physplot_poster_hd.png" alt="PhysPlot AI Poster" class="bento-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
+            <div class="bento-header-title">
+              <span class="bento-header-icon">🎯</span>
+              <span>Fokus Kepakaran</span>
+            </div>
+            <ul class="bento-checklist">
+              <li class="bento-check-item">
+                <span class="check-circ-icon">✓</span>
+                <span>Pendidikan Fizik Tingkatan 4 & 5 (KSSM)</span>
+              </li>
+              <li class="bento-check-item">
+                <span class="check-circ-icon">✓</span>
+                <span>Inovasi & Transformasi Digital Pendidikan</span>
+              </li>
+              <li class="bento-check-item">
+                <span class="check-circ-icon">✓</span>
+                <span>Pembangunan Aplikasi & Platform Pendidikan</span>
+              </li>
+              <li class="bento-check-item">
+                <span class="check-circ-icon">✓</span>
+                <span>Perkongsian Ilmu & Komuniti Profesional</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Poster 3: HeadcountPro AI (Span 4) -->
-        <div class="stripe-bento-card bento-span-4 stripe-reveal">
+        <!-- Card 3: Pendekatan Saya -->
+        <div class="profile-bento-card">
           <div>
-            <div class="bento-card-eyebrow" style="color: var(--stripe-blurple);">ANALITIK AKADEMIK</div>
-            <h3 class="bento-card-title">HeadcountPro AI</h3>
-            <p class="bento-card-desc">
-              "Smarter Data. Better Decisions." Dashboard TOV-ETR SPM dengan Chat-to-Data Assistant interaktif.
+            <div class="bento-header-title">
+              <span class="bento-header-icon">💡</span>
+              <span>Pendekatan Saya</span>
+            </div>
+            <p class="bento-paragraph-text">
+              Menggabungkan pedagogi berkesan dengan teknologi terkini untuk mewujudkan pengalaman pembelajaran yang menarik dan inklusif. Setiap inovasi dihasilkan berasaskan keperluan sebenar guru dan murid.
             </p>
           </div>
-          <div class="bento-poster-preview" onclick="window.openPosterLightbox('assets/posters/headcountpro_poster_hd.png', 'HeadcountPro AI — SMARTER DATA. BETTER DECISIONS.')">
-            <img src="assets/posters/headcountpro_poster_hd.png" alt="HeadcountPro AI Poster" class="bento-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
+          <a href="#bahan-digital" class="bento-action-link">
+            <span>Lihat karya saya</span>
+            <span>›</span>
+          </a>
         </div>
 
-        <!-- Poster 4: CIDS Suites Pro 2.0 (Span 8) -->
-        <div class="stripe-bento-card bento-span-8 stripe-reveal stripe-reveal-delay-1">
+      </div>
+
+      <!-- Bottom 4-Column Credentials Bar -->
+      <div class="profile-credentials-bar stripe-reveal stripe-reveal-delay-3">
+        <div class="credential-item">
+          <div class="credential-icon-box"></div>
           <div>
-            <div class="bento-card-eyebrow" style="color: var(--stripe-amber);">AUTOMASI PENDIDIK</div>
-            <h3 class="bento-card-title">CIDS Suites Pro 2.0</h3>
-            <p class="bento-card-desc">
-              "AI Assists. Less Admin. More Teaching." Aplikasi Desktop profesional (macOS DMG & Windows EXE) mengautomasikan RPT, Jadual Waktu, dan RPH harian guru.
-            </p>
-          </div>
-          <div class="bento-poster-preview" onclick="window.openPosterLightbox('assets/posters/cidssuitespro_poster_hd.png', 'CIDS SUITES PRO 2.0 — AI ASSISTS. LESS ADMIN. MORE TEACHING.')">
-            <img src="assets/posters/cidssuitespro_poster_hd.png" alt="CIDS Suites Pro 2.0 Poster" class="bento-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
+            <div class="credential-title-text">Apple Learning Coach</div>
+            <div class="credential-sub-text">Apple Education</div>
           </div>
         </div>
 
-        <!-- Poster 5: CikguScan AI (Span 6) -->
-        <div class="stripe-bento-card bento-span-6 stripe-reveal">
+        <div class="credential-item">
+          <div class="credential-icon-box">📚</div>
           <div>
-            <div class="bento-card-eyebrow" style="color: var(--stripe-emerald);">IMBASAN PINTAR AI</div>
-            <h3 class="bento-card-title">CikguScan AI</h3>
-            <p class="bento-card-desc">
-              "Scan. Mark. Analyse. Save Time." Sistem semakan optik borang OMR A4 Landscape secara automatik dalam masa 1 saat dengan analisis item segera.
-            </p>
-          </div>
-          <div class="bento-poster-preview" onclick="window.openPosterLightbox('assets/posters/cikguscan_poster_hd.png', 'CikguScan AI — SCAN. MARK. ANALYSE. SAVE TIME.')">
-            <img src="assets/posters/cikguscan_poster_hd.png" alt="CikguScan AI Poster" class="bento-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
+            <div class="credential-title-text">GC Fizik</div>
+            <div class="credential-sub-text">Guru Cemerlang Fizik</div>
           </div>
         </div>
 
-        <!-- Poster 6: PhysFlix (Span 6) -->
-        <div class="stripe-bento-card bento-span-6 stripe-reveal stripe-reveal-delay-1">
+        <div class="credential-item">
+          <div class="credential-icon-box">🎨</div>
           <div>
-            <div class="bento-card-eyebrow" style="color: var(--stripe-coral);">SUMBER TERBUKA (OER)</div>
-            <h3 class="bento-card-title">PhysFlix</h3>
-            <p class="bento-card-desc">
-              Platform penstriman video pembelajaran Fizik SPM KSSM gaya Netflix yang merangkumi keseluruhan video mengikut bab dan standard pembelajaran DSKP.
-            </p>
-          </div>
-          <div class="bento-poster-preview" onclick="window.location.href='#cinema'">
-            <img src="assets/screenshots/app_screenshot_1.png" alt="PhysFlix Video Hub" class="bento-poster-img">
-            <div class="poster-zoom-pill">▶ Tonton Video</div>
+            <div class="credential-title-text">Edufluencer KPM 4.0</div>
+            <div class="credential-sub-text">Komuniti Pendidikan Digital</div>
           </div>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. STRIPE INTERACTIVE 5-APP PRODUCT DEEP-DIVE
-       ========================================================================== -->
-  <section class="section" id="deepdive" style="background: #ffffff; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
-    <div class="container">
-      
-      <div class="stripe-reveal" style="text-align: center;">
-        <div class="stripe-section-eyebrow">TEROKA MENDALAM SETIAP APLIKASI</div>
-        <h2 class="stripe-section-title">Enam Ekosistem Pintar. <span class="stripe-gradient-text">Dibina Berasaskan Keperluan Sebenar.</span></h2>
-        <p class="stripe-section-desc" style="margin-left: auto; margin-right: auto;">
-          Pilih aplikasi di bawah untuk melihat seni bina teknikal, tangkapan skrin rasmi, dan pautan langsung ke pelayan web aktif.
-        </p>
-      </div>
-
-      <!-- Segmented Tab Switcher -->
-      <div class="stripe-tab-nav stripe-reveal">
-        <button class="stripe-tab-trigger active" onclick="window.switchStripeProductTab('physplot', this)">PhysPlot AI</button>
-        <button class="stripe-tab-trigger" onclick="window.switchStripeProductTab('headcountpro', this)">HeadcountPro AI</button>
-        <button class="stripe-tab-trigger" onclick="window.switchStripeProductTab('cikguscan', this)">CikguScan AI</button>
-        <button class="stripe-tab-trigger" onclick="window.switchStripeProductTab('myphysicstutor', this)">MyPhysicsTutor</button>
-        <button class="stripe-tab-trigger" onclick="window.switchStripeProductTab('cidssuites', this)">CIDS Suites Pro 2.0</button>
-      </div>
-
-      <!-- Pane 1: PhysPlot AI -->
-      <div class="stripe-product-pane active" id="stripe-pane-physplot">
-        <div class="stripe-showcase-box">
-          <div class="stripe-showcase-info">
-            <span class="showcase-tag">Enjin Pemplotan Graf Berketepatan Tinggi</span>
-            <h3 class="showcase-title">PhysPlot AI</h3>
-            <div class="showcase-tagline">Precision Science Graph Engine with 3D Robot Tutor</div>
-            <p class="showcase-desc">
-              Diakses di <a href="https://physplot.vercel.app/" target="_blank" style="color: var(--stripe-blurple); text-decoration: underline;">physplot.vercel.app</a>. Membimbing murid melukis graf sains berketepatan tinggi berpandukan 7 langkah simulasi dan rubrik penskoran SPM.
-            </p>
-
-            <div class="stripe-feature-checklist">
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Simulasi 7 Langkah:</strong> Pemboleh ubah, skala paksi, label & unit, plot titik, garis penyesuaian terbaik, kecerunan, dan tafsiran.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Robot Tutor AI:</strong> Memberikan panduan segera, pembesar kanta koordinat, dan semakan penskoran SPM automatik.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Pengesahan Segi Tiga SPM:</strong> Memastikan saiz segi tiga kecerunan $\ge 8 \times 8$ petak besar menepati rubrik KPM.</span>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="https://physplot.vercel.app/" target="_blank" class="stripe-btn-pill">
-                <span>Buka PhysPlot Live ↗</span>
-              </a>
-              <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.openPosterLightbox('assets/posters/physplot_poster_hd.png', 'PhysPlot AI')">
-                <span>Lihat Poster HD 🔍</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="showcase-poster-frame" onclick="window.openPosterLightbox('assets/posters/physplot_poster_hd.png', 'PhysPlot AI')">
-            <img src="assets/posters/physplot_poster_hd.png" alt="PhysPlot AI Poster" class="showcase-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pane 2: HeadcountPro AI -->
-      <div class="stripe-product-pane" id="stripe-pane-headcountpro">
-        <div class="stripe-showcase-box">
-          <div class="stripe-showcase-info">
-            <span class="showcase-tag">Sistem Analisis Prestasi SPM</span>
-            <h3 class="showcase-title">HeadcountPro AI</h3>
-            <div class="showcase-tagline">Smarter Data. Better Decisions.</div>
-            <p class="showcase-desc">
-              Diakses di <a href="https://headcountpro.vercel.app/" target="_blank" style="color: var(--stripe-blurple); text-decoration: underline;">headcountpro.vercel.app</a>. Membantu pihak pengurusan sekolah menganalisis jurang prestasi calon SPM dengan bantuan pembantu perbualan data pintar.
-            </p>
-
-            <div class="stripe-feature-checklist">
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Dashboard TOV-ETR:</strong> Penjejakan GPS TOV (contoh: 4.47) dan GPS ETR sasaran akhir (contoh: 1.28) secara visual.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Chat-to-Data AI:</strong> Tanya analisis data peperiksaan secara perbualan (contoh: *"Adakah kelas 5 Amanah mencapai target ETR?"*).</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Penjejakan Berperingkat:</strong> Memantau pencapaian PAT T4 (OTI 1), PPT T5 (OTI 2), dan PPC T5 (OTI 3).</span>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="https://headcountpro.vercel.app/" target="_blank" class="stripe-btn-pill">
-                <span>Buka HeadcountPro Live ↗</span>
-              </a>
-              <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.openPosterLightbox('assets/posters/headcountpro_poster_hd.png', 'HeadcountPro AI')">
-                <span>Lihat Poster HD 🔍</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="showcase-poster-frame" onclick="window.openPosterLightbox('assets/posters/headcountpro_poster_hd.png', 'HeadcountPro AI')">
-            <img src="assets/posters/headcountpro_poster_hd.png" alt="HeadcountPro AI Poster" class="showcase-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pane 3: CikguScan AI -->
-      <div class="stripe-product-pane" id="stripe-pane-cikguscan">
-        <div class="stripe-showcase-box">
-          <div class="stripe-showcase-info">
-            <span class="showcase-tag">Sistem Semakan OMR Pintar Kamera</span>
-            <h3 class="showcase-title">CikguScan AI</h3>
-            <div class="showcase-tagline">Scan. Mark. Analyse. Save Time.</div>
-            <p class="showcase-desc">
-              Diakses di <a href="https://cikguscan.vercel.app/" target="_blank" style="color: var(--stripe-blurple); text-decoration: underline;">cikguscan.vercel.app</a>. Menukar telefon pintar menjadi mesin pengimbas OMR berkelajuan tinggi untuk menanda kertas objektif murid.
-            </p>
-
-            <div class="stripe-feature-checklist">
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Borang OMR A4 Landscape:</strong> 2 borang jawapan (sehingga 40 soalan) pada satu kertas A4 bagi menjimatkan kos sekolah.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Imbas Pantas 1 Saat:</strong> Pengecaman optik kamera telefon pintar tanpa memerlukan peralatan perkakasan tambahan.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Tanya AI CikguScan:</strong> Menjana carta bar markah, analisis soalan paling sukar, dan graf tren prestasi murid.</span>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="https://cikguscan.vercel.app/" target="_blank" class="stripe-btn-pill">
-                <span>Buka CikguScan Live ↗</span>
-              </a>
-              <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.openPosterLightbox('assets/posters/cikguscan_poster_hd.png', 'CikguScan AI')">
-                <span>Lihat Poster HD 🔍</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="showcase-poster-frame" onclick="window.openPosterLightbox('assets/posters/cikguscan_poster_hd.png', 'CikguScan AI')">
-            <img src="assets/posters/cikguscan_poster_hd.png" alt="CikguScan AI Poster" class="showcase-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pane 4: MyPhysicsTutor -->
-      <div class="stripe-product-pane" id="stripe-pane-myphysicstutor">
-        <div class="stripe-showcase-box">
-          <div class="stripe-showcase-info">
-            <span class="showcase-tag">Hab Pembelajaran Fizik Lengkap</span>
-            <h3 class="showcase-title">My Physics Tutor</h3>
-            <div class="showcase-tagline">Belajar Fizik dengan lebih mudah, interaktif & berkesan.</div>
-            <p class="showcase-desc">
-              Diakses di <a href="https://myphysicstutor2.vercel.app/" target="_blank" style="color: var(--stripe-blurple); text-decoration: underline;">myphysicstutor2.vercel.app</a>. Platform komprehensif mengintegrasikan makmal maya 3D, simulasi DSKP, pentaksiran interaktif, dan nota ringkas.
-            </p>
-
-            <div class="stripe-feature-checklist">
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>My Home Physics Lab 3D:</strong> Amali wajib Fizik secara maya (Simulasi Medan Magnet, Litar Rheostat, dll).</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Liputan 100% DSKP SPM:</strong> Nota, kuiz diagnostik, dan simulasi 60fps bagi setiap bab Tingkatan 4 dan 5.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet">✓</span>
-                <span><strong>Ekosistem Bersepadu:</strong> Pautan terus ke Wowhoot (Kuiz), CheatNote, Modul Nilam, dan Cikgu Scan.</span>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="https://myphysicstutor2.vercel.app/" target="_blank" class="stripe-btn-pill">
-                <span>Buka Portal Live ↗</span>
-              </a>
-              <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.openPosterLightbox('assets/posters/myphysicstutor_poster_hd.png', 'My Physics Tutor')">
-                <span>Lihat Poster HD 🔍</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="showcase-poster-frame" onclick="window.openPosterLightbox('assets/posters/myphysicstutor_poster_hd.png', 'My Physics Tutor')">
-            <img src="assets/posters/myphysicstutor_poster_hd.png" alt="My Physics Tutor Poster" class="showcase-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pane 5: CIDS Suites Pro 2.0 -->
-      <div class="stripe-product-pane" id="stripe-pane-cidssuites">
-        <div class="stripe-showcase-box" style="margin-bottom: 24px;">
-          <div class="stripe-showcase-info">
-            <span class="showcase-tag" style="color: var(--stripe-amber);">Aplikasi Desktop Automasi Guru</span>
-            <h3 class="showcase-title">CIDS Suites Pro 2.0</h3>
-            <div class="showcase-tagline" style="color: var(--stripe-amber);">AI Assists. Less Admin. More Teaching.</div>
-            <p class="showcase-desc">
-              Diakses di <a href="https://cidspro.vercel.app/" target="_blank" style="color: var(--stripe-amber); text-decoration: underline;">cidspro.vercel.app</a>. Aplikasi Desktop profesional untuk macOS (DMG) dan Windows (EXE) bagi memudahkan urusan dokumentasi guru asiemodel.net.
-            </p>
-
-            <div class="stripe-feature-checklist">
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet" style="color: var(--stripe-amber);">✓</span>
-                <span><strong>RPT Assist:</strong> Penjanaan automatik Rancangan Pengajaran Tahunan berpandukan takwim sekolah.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet" style="color: var(--stripe-amber);">✓</span>
-                <span><strong>Schedule Assist:</strong> Muat turun dan automasi susunan jadual waktu mengajar tanpa pertindihan.</span>
-              </div>
-              <div class="stripe-check-item">
-                <span class="check-icon-bullet" style="color: var(--stripe-amber);">✓</span>
-                <span><strong>RPH Assist & Deleter:</strong> Jana RPH berkualiti tinggi dan padam rekod arkib dengan pengesahan selamat.</span>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
-              <a href="https://cidspro.vercel.app/" target="_blank" class="stripe-btn-pill" style="background: var(--stripe-amber); color: #000; font-weight: 700;">
-                <span>Buka CIDSPRO Live ↗</span>
-              </a>
-              <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.openPosterLightbox('assets/posters/cidssuitespro_poster_hd.png', 'CIDS Suites Pro 2.0')">
-                <span>Lihat Poster HD 🔍</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="showcase-poster-frame" onclick="window.openPosterLightbox('assets/posters/cidssuitespro_poster_hd.png', 'CIDS Suites Pro 2.0')">
-            <img src="assets/posters/cidssuitespro_poster_hd.png" alt="CIDS Suites Pro 2.0 Poster" class="showcase-poster-img">
-            <div class="poster-zoom-pill">🔍 Zoom HD</div>
-          </div>
-        </div>
-
-        <!-- 4 Sub-Modules Showcase -->
-        <div class="cids-modules-showcase stripe-reveal">
-          <div class="cids-module-card">
-            <div class="cids-thumb-box">
-              <img src="assets/images/cidspro_rpt_assist.png" alt="RPT Assist" class="cids-thumb-img">
-            </div>
-            <div class="cids-module-content">
-              <div class="cids-module-title">RPT Assist</div>
-              <div class="cids-module-desc">Penjanaan automatik Rancangan Pengajaran Tahunan berpandukan kurikulum.</div>
-            </div>
-          </div>
-
-          <div class="cids-module-card">
-            <div class="cids-thumb-box">
-              <img src="assets/images/cidspro_schedule_assist.png" alt="Schedule Assist" class="cids-thumb-img">
-            </div>
-            <div class="cids-module-content">
-              <div class="cids-module-title">Schedule Assist</div>
-              <div class="cids-module-desc">Pengekstrakan jadual waktu pantas tanpa ralat pertindihan waktu mengajar.</div>
-            </div>
-          </div>
-
-          <div class="cids-module-card">
-            <div class="cids-thumb-box">
-              <img src="assets/images/cidspro_rph_assist.png" alt="RPH Assist" class="cids-thumb-img">
-            </div>
-            <div class="cids-module-content">
-              <div class="cids-module-title">RPH Assist</div>
-              <div class="cids-module-desc">Penulisan RPH berkualiti tinggi lengkap aktiviti PAK21 dan BBM.</div>
-            </div>
-          </div>
-
-          <div class="cids-module-card">
-            <div class="cids-thumb-box">
-              <img src="assets/images/cidspro_rph_deleter.png" alt="RPH Deleter" class="cids-thumb-img">
-            </div>
-            <div class="cids-module-content">
-              <div class="cids-module-title">RPH Deleter</div>
-              <div class="cids-module-desc">Pembersihan fail dan rekod arkib mengajar dengan selamat dan pantas.</div>
-            </div>
+        <div class="credential-item">
+          <div class="credential-icon-box">👥</div>
+          <div>
+            <div class="credential-title-text">YDP MGC Kerian</div>
+            <div class="credential-sub-text">Sesi 2026</div>
           </div>
         </div>
       </div>
@@ -530,320 +249,292 @@
   </section>
 
   <!-- ==========================================================================
-       6. STRIPE DEVELOPER PLAYGROUND (PHYSPLOT STUDIO)
+       3. ROADMAP: ANUGERAH & PENGIKTIRAFAN
        ========================================================================== -->
-  <section class="section section-dark" id="studio">
+  <section class="section" id="anugerah">
     <div class="container">
-      
       <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">ENJIN SIMULASI LANGSUNG</div>
-        <h2 class="stripe-section-title">PhysPlot Developer Studio. <span class="stripe-gradient-text">Ketepatan di Hujung Jari.</span></h2>
-        <p class="stripe-section-desc">
-          Uji enjin regresi linear masa nyata PhysPlot secara langsung di bawah. Eksperimen: <strong>Hukum Ohm ($V = IR$)</strong> dengan pengesahan rubrik penskoran SPM.
-        </p>
+        <div class="section-eyebrow">BAHAGIAN 2</div>
+        <h2 class="section-title">Anugerah & Pengiktirafan</h2>
+        <p class="section-desc">Pencapaian berprestij di peringkat Antarabangsa, Kebangsaan, Negeri, dan Daerah.</p>
       </div>
 
-      <div class="stripe-playground-terminal stripe-reveal">
+      <div class="bento-grid-3col stripe-reveal">
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2025</div>
+            <h3 class="card-heading-title">Anugerah Emas (Gold Award) IIEF</h3>
+            <p class="card-body-text">International Innovation & Exhibition Fair (IIEF 2025) anjuran Kolej MARA Kulim.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(23, 'Sijil Emas IIEF 2025')">Lihat Sijil M/S 23 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2024 & 2025</div>
+            <h3 class="card-heading-title">Anugerah Perak InnoZilla USM</h3>
+            <p class="card-body-text">SDG Innovation Competition anjuran Universiti Sains Malaysia (USM).</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(24, 'Sijil InnoZilla USM')">Lihat Sijil M/S 24 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">KEBANGSAAN • KPM</div>
+            <h3 class="card-heading-title">Anugerah Perkhidmatan Cemerlang</h3>
+            <p class="card-body-text">Penerima APC KPM sebanyak dua kali (Tahun 2016 & 2026).</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(19, 'Sijil APC KPM')">Lihat Sijil M/S 19 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. ROADMAP: SUMBANGAN ANTARABANGSA
+       ========================================================================== -->
+  <section class="section section-alt" id="antarabangsa">
+    <div class="container">
+      <div class="stripe-reveal">
+        <div class="section-eyebrow">BAHAGIAN 3</div>
+        <h2 class="section-title">Sumbangan Antarabangsa</h2>
+        <p class="section-desc">Penyertaan persidangan antarabangsa dan pensijilan bimbingan teknologi Apple South East Asia.</p>
+      </div>
+
+      <div class="bento-grid-2col stripe-reveal">
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">GLOBAL SEA • 2026</div>
+            <h3 class="card-heading-title">Apple Learning Coach (ALC)</h3>
+            <p class="card-body-text">Pensijilan bimbingan profesional teknologi global oleh Apple South East Asia bagi menyokong transformasi pengajaran digital.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(60, 'Sijil Apple Learning Coach')">Lihat Sijil M/S 60 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2024</div>
+            <h3 class="card-heading-title">Pembentang Inovasi IIEF Antarabangsa</h3>
+            <p class="card-body-text">Membentangkan kajian amali makmal maya MyHomePhysicsLab di persidangan inovasi antarabangsa.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(21, 'Sijil Pembentang Antarabangsa')">Lihat Sijil M/S 21 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. ROADMAP: SUMBANGAN KEBANGSAAN
+       ========================================================================== -->
+  <section class="section" id="kebangsaan">
+    <div class="container">
+      <div class="stripe-reveal">
+        <div class="section-eyebrow">BAHAGIAN 4</div>
+        <h2 class="section-title">Sumbangan Kebangsaan</h2>
+        <p class="section-desc">Pelantikan sebagai panel pakar kurikulum BPK KPM dan penyelidikan Universiti Kebangsaan Malaysia (UKM).</p>
+      </div>
+
+      <div class="bento-grid-2col stripe-reveal">
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">KEBANGSAAN • UKM BANGI</div>
+            <h3 class="card-heading-title">Panel Pakar Fizik & Dron Pendidikan UKM</h3>
+            <p class="card-body-text">Penyelidikan Pembinaan Kandungan Ilmu Fizik Teknologi Dron Pendidikan Menengah anjuran Universiti Kebangsaan Malaysia.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(28, 'Surat Pelantikan Panel UKM')">Lihat Surat M/S 28 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">KEBANGSAAN • BPK KPM</div>
+            <h3 class="card-heading-title">Panel MOBIM & Reka Bentuk SDG 4IR BPK</h3>
+            <p class="card-body-text">Panel Pembinaan Modul MOBIM Sains Tambahan & Reka Bentuk Penerapan Matlamat Pembangunan Mampan (SDG) Fizik.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(29, 'Surat Penghargaan BPK KPM')">Lihat Surat M/S 29 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. ROADMAP: SUMBANGAN NEGERI
+       ========================================================================== -->
+  <section class="section section-alt" id="negeri">
+    <div class="container">
+      <div class="stripe-reveal">
+        <div class="section-eyebrow">BAHAGIAN 5</div>
+        <h2 class="section-title">Sumbangan Negeri Perak</h2>
+        <p class="section-desc">Penggerak inovasi pedagogi negeri, penulis modul anekdot JPN Perak, dan bimbingan guru daerah.</p>
+      </div>
+
+      <div class="bento-grid-2col stripe-reveal">
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">NEGERI PERAK • 2026</div>
+            <h3 class="card-heading-title">Penulis Buku Anekdot Edufluencers JPN Perak</h3>
+            <p class="card-body-text">Karya penulisan ilmiah dalam buku "Rona-Rona Pendidik: Anekdot Edufluencers KPM Negeri Perak".</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(75, 'Sijil Penulis Anekdot JPN Perak')">Lihat Sijil M/S 75 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">NEGERI PERAK • 2024-2026</div>
+            <h3 class="card-heading-title">Penceramah Bengkel & Bimbingan Pedagogi Digital</h3>
+            <p class="card-body-text">Membimbing ratusan guru Fizik dan sains seluruh Perak dalam penggunaan alat digital PAK21.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(80, 'Sijil Penceramah Negeri')">Lihat Sijil M/S 80 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. ROADMAP: SUMBANGAN DAERAH & INSTITUSI
+       ========================================================================== -->
+  <section class="section" id="daerah">
+    <div class="container">
+      <div class="stripe-reveal">
+        <div class="section-eyebrow">BAHAGIAN 6</div>
+        <h2 class="section-title">Sumbangan Daerah & Institusi</h2>
+        <p class="section-desc">Kepimpinan guru cemerlang daerah Kerian dan pembudayaan inovasi di SMK Agama Kerian.</p>
+      </div>
+
+      <div class="bento-grid-2col stripe-reveal">
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">DAERAH KERIAN • 2026</div>
+            <h3 class="card-heading-title">Yang Dipertua Majlis Guru Cemerlang (MGC) Kerian</h3>
+            <p class="card-body-text">Memimpin kepakaran guru cemerlang daerah Kerian dalam memperkasa kualiti pengajaran dan pembelajaran.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(85, 'Surat Pelantikan YDP MGC')">Lihat Surat M/S 85 ›</button>
+        </div>
+
+        <div class="standard-bento-card">
+          <div>
+            <div class="card-badge-tag">SMK AGAMA KERIAN</div>
+            <h3 class="card-heading-title">Penyelaras Inovasi & Digital Sekolah</h3>
+            <p class="card-body-text">Membangunkan sistem pengurusan digital sekolah dan membimbing murid dalam pertandingan STEM.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(15, 'Perakuan Pengetua SMKA Kerian')">Lihat Sokongan Pengetua M/S 15 ›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. ROADMAP: BAHAN KANDUNGAN DIGITAL (5 POSTER & INOVASI)
+       ========================================================================== -->
+  <section class="section section-alt" id="bahan-digital">
+    <div class="container">
+      <div class="stripe-reveal">
+        <div class="section-eyebrow">BAHAGIAN 7</div>
+        <h2 class="section-title">Bahan Kandungan Digital & Aplikasi</h2>
+        <p class="section-desc">Lima inovasi berimpak tinggi yang dibangunkan untuk memacu kecemerlangan murid dan kecekapan guru.</p>
+      </div>
+
+      <div class="bento-grid-3col stripe-reveal">
         
-        <div class="playground-top-bar">
-          <div class="terminal-dots">
-            <div class="terminal-dot dot-red"></div>
-            <div class="terminal-dot dot-yellow"></div>
-            <div class="terminal-dot dot-green"></div>
+        <!-- PhysPlot AI -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/physplot_poster_hd.png', 'PhysPlot AI — Enjin Pemplotan Graf Sains')">
+            <img src="assets/posters/physplot_poster_hd.png" alt="PhysPlot AI" class="poster-card-img">
+            <div class="poster-zoom-badge">🔍 Zoom HD</div>
           </div>
-          <div class="terminal-title">physplot-engine.js — Linear Regression v2.4 (Ohm's Law)</div>
-          <div style="font-size: 11px; color: var(--stripe-cyan); font-family: var(--font-mono);">60 FPS LIVE</div>
+          <div>
+            <div class="card-badge-tag">ENJIN GRAF SAINS</div>
+            <h3 class="card-heading-title">PhysPlot AI</h3>
+            <p class="card-body-text">Precision Science Graph Engine with 3D Robot Tutor.</p>
+          </div>
+          <a href="https://physplot.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
         </div>
 
-        <div class="playground-grid-layout">
-          
-          <div class="playground-canvas-box">
-            <canvas id="physplot-canvas"></canvas>
+        <!-- HeadcountPro AI -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/headcountpro_poster_hd.png', 'HeadcountPro AI — SMARTER DATA. BETTER DECISIONS.')">
+            <img src="assets/posters/headcountpro_poster_hd.png" alt="HeadcountPro AI" class="poster-card-img">
+            <div class="poster-zoom-badge">🔍 Zoom HD</div>
           </div>
-
-          <div class="playground-sidebar">
-            <div class="playground-telemetry-box">
-              <div class="telemetry-title">
-                <span>TELEMETRI KEPUTUSAN</span>
-                <span style="color: var(--stripe-cyan); font-size: 11px;">SPM COMPLIANT</span>
-              </div>
-              <div class="telemetry-row">
-                <span>Kecerunan Garis ($m$):</span>
-                <span class="telemetry-val" id="stripe-calc-m">5.04 V A⁻¹</span>
-              </div>
-              <div class="telemetry-row">
-                <span>Pintasan-$y$ ($c$):</span>
-                <span class="telemetry-val" id="stripe-calc-c">-0.01 V</span>
-              </div>
-              <div class="telemetry-row">
-                <span>Nilai Rintangan ($R$):</span>
-                <span class="telemetry-val" id="stripe-calc-r" style="color: var(--stripe-emerald);">5.04 Ω</span>
-              </div>
-            </div>
-
-            <div class="playground-telemetry-box">
-              <div class="telemetry-title">
-                <span>KAWALAN DATA LANGSUNG</span>
-              </div>
-              <div style="display: flex; gap: 10px; margin-top: 8px;">
-                <button class="stripe-btn-pill" onclick="window.addStudioPoint()" style="font-size: 13px; padding: 7px 16px;">+ Tambah Titik</button>
-                <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.resetStudioPoints()" style="font-size: 13px; padding: 7px 16px; color: #fff; border-color: rgba(255,255,255,0.2);">Reset Data</button>
-              </div>
-            </div>
+          <div>
+            <div class="card-badge-tag">ANALITIK SPM</div>
+            <h3 class="card-heading-title">HeadcountPro AI</h3>
+            <p class="card-body-text">Dashboard TOV-ETR SPM dengan Chat-to-Data Assistant.</p>
           </div>
+          <a href="https://headcountpro.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
+        </div>
 
+        <!-- MyPhysicsTutor -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/myphysicstutor_poster_hd.png', 'My Physics Tutor — Belajar Fizik Interaktif')">
+            <img src="assets/posters/myphysicstutor_poster_hd.png" alt="My Physics Tutor" class="poster-card-img">
+            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+          </div>
+          <div>
+            <div class="card-badge-tag">HAB MAKMAL MAYA 3D</div>
+            <h3 class="card-heading-title">My Physics Tutor</h3>
+            <p class="card-body-text">Simulasi makmal 3D interaktif dan liputan 100% DSKP Fizik SPM.</p>
+          </div>
+          <a href="https://myphysicstutor2.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
+        </div>
+
+        <!-- CIDS Suites Pro 2.0 -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/cidssuitespro_poster_hd.png', 'CIDS Suites Pro 2.0')">
+            <img src="assets/posters/cidssuitespro_poster_hd.png" alt="CIDS Suites Pro 2.0" class="poster-card-img">
+            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+          </div>
+          <div>
+            <div class="card-badge-tag">AUTOMASI PENDIDIK</div>
+            <h3 class="card-heading-title">CIDS Suites Pro 2.0</h3>
+            <p class="card-body-text">AI Assists. Less Admin. More Teaching. (RPT, Jadual, RPH).</p>
+          </div>
+          <a href="https://cidspro.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
+        </div>
+
+        <!-- CikguScan AI -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/cikguscan_poster_hd.png', 'CikguScan AI')">
+            <img src="assets/posters/cikguscan_poster_hd.png" alt="CikguScan AI" class="poster-card-img">
+            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+          </div>
+          <div>
+            <div class="card-badge-tag">IMBASAN OMR PINTAR</div>
+            <h3 class="card-heading-title">CikguScan AI</h3>
+            <p class="card-body-text">Scan. Mark. Analyse. Save Time. (Borang OMR A4 Landscape).</p>
+          </div>
+          <a href="https://cikguscan.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
+        </div>
+
+        <!-- PhysFlix -->
+        <div class="standard-bento-card">
+          <div class="poster-card-frame" onclick="window.location.href='#video'">
+            <img src="assets/screenshots/app_screenshot_1.png" alt="PhysFlix" class="poster-card-img">
+            <div class="poster-zoom-badge">▶ Tonton Video</div>
+          </div>
+          <div>
+            <div class="card-badge-tag">SUMBER TERBUKA (OER)</div>
+            <h3 class="card-heading-title">PhysFlix</h3>
+            <p class="card-body-text">Platform penstriman video pembelajaran Fizik SPM KSSM gaya Netflix.</p>
+          </div>
+          <a href="https://physflix.vercel.app/" target="_blank" class="bento-action-link">Buka Live App ↗</a>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- ==========================================================================
-       7. STRIPE ENTERPRISE AWARDS & RECOGNITIONS
+       9. ROADMAP: TEATER VIDEO PERSEMBAHAN
        ========================================================================== -->
-  <section class="section" id="pencapaian">
+  <section class="section section-dark" id="video">
     <div class="container">
-      
       <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">PENGIKTIRAFAN & IMPAK GLOBAL</div>
-        <h2 class="stripe-section-title">Pencapaian Bertaraf <span class="stripe-gradient-text">Kebangsaan & Antarabangsa.</span></h2>
-        <p class="stripe-section-desc">
-          Pengiktirafan berterusan atas sumbangan inovasi pedagogi digital, pelantikan panel pakar kurikulum, dan impak kepada komuniti pendidik.
-        </p>
-      </div>
-
-      <div class="stripe-awards-grid">
-        
-        <!-- Award 1 -->
-        <div class="stripe-award-card stripe-reveal">
-          <div>
-            <div class="award-badge-icon">🥇</div>
-            <div class="award-tier-tag">ANTARABANGSA • 2025</div>
-            <h4 class="award-main-title">Anugerah Emas (Gold Award)</h4>
-            <p class="award-org-text">International Innovation & Exhibition Fair (IIEF 2025) anjuran Kolej MARA Kulim.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(23, 'Sijil Anugerah Emas IIEF 2025')">
-            Lihat Sijil M/S 23 →
-          </button>
-        </div>
-
-        <!-- Award 2 -->
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-1">
-          <div>
-            <div class="award-badge-icon" style="background: rgba(0, 212, 255, 0.15); color: #0088cc;">🥈</div>
-            <div class="award-tier-tag" style="color: var(--stripe-cyan);">ANTARABANGSA • 2024 & 2025</div>
-            <h4 class="award-main-title">Anugerah Perak InnoZilla</h4>
-            <p class="award-org-text">SDG Innovation Competition anjuran Universiti Sains Malaysia (USM).</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(24, 'Sijil InnoZilla USM')">
-            Lihat Sijil M/S 24 →
-          </button>
-        </div>
-
-        <!-- Award 3 -->
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-2">
-          <div>
-            <div class="award-badge-icon" style="background: rgba(121, 40, 202, 0.15); color: var(--stripe-violet);"></div>
-            <div class="award-tier-tag" style="color: var(--stripe-violet);">GLOBAL SEA • 2026</div>
-            <h4 class="award-main-title">Apple Learning Coach (ALC)</h4>
-            <p class="award-org-text">Pensijilan bimbingan teknologi profesional global oleh Apple South East Asia.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(60, 'Sijil Apple Learning Coach')">
-            Lihat Sijil M/S 60 →
-          </button>
-        </div>
-
-        <!-- Award 4 -->
-        <div class="stripe-award-card stripe-reveal">
-          <div>
-            <div class="award-badge-icon" style="background: rgba(99, 91, 255, 0.15); color: var(--stripe-blurple);">🛸</div>
-            <div class="award-tier-tag">KEBANGSAAN • 2025</div>
-            <h4 class="award-main-title">Panel Pakar Dron UKM</h4>
-            <p class="award-org-text">Penyelidikan Pembinaan Kandungan Ilmu Fizik Teknologi Dron Pendidikan Menengah UKM.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(28, 'Surat Pelantikan Panel Pakar UKM')">
-            Lihat Surat M/S 28 →
-          </button>
-        </div>
-
-        <!-- Award 5 -->
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-1">
-          <div>
-            <div class="award-badge-icon" style="background: rgba(255, 90, 95, 0.15); color: var(--stripe-coral);">📘</div>
-            <div class="award-tier-tag" style="color: var(--stripe-coral);">KEBANGSAAN • BPK KPM</div>
-            <h4 class="award-main-title">Panel MOBIM & SDG 4IR BPK</h4>
-            <p class="award-org-text">Panel Pembinaan Modul MOBIM Sains Tambahan & Reka Bentuk Penerapan SDG Fizik BPK KPM.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(29, 'Sijil Penghargaan Panel BPK KPM')">
-            Lihat Sijil M/S 29 →
-          </button>
-        </div>
-
-        <!-- Award 6 -->
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-2">
-          <div>
-            <div class="award-badge-icon" style="background: rgba(0, 217, 126, 0.15); color: var(--stripe-emerald);">🎖️</div>
-            <div class="award-tier-tag" style="color: var(--stripe-emerald);">KPM • 2016 & 2026</div>
-            <h4 class="award-main-title">Anugerah Perkhidmatan Cemerlang</h4>
-            <p class="award-org-text">Penerima APC KPM sebanyak dua kali (SMKA Limbang 2016 & SMKA Kerian 2026).</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(19, 'Sijil APC KPM')">
-            Lihat Sijil M/S 19 →
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. STRIPE BOOKS & RESOURCE GRID (PENERBITAN RASMI)
-       ========================================================================== -->
-  <section class="section" id="penerbitan" style="background: #ffffff; border-top: 1px solid var(--border-light);">
-    <div class="container">
-      
-      <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">KARYA & PENULISAN ILMIAH</div>
-        <h2 class="stripe-section-title">Penerbitan Modul & <span class="stripe-gradient-text">Buku Ilmiah Rasmi.</span></h2>
-        <p class="stripe-section-desc">
-          Tujuh modul amali, nota padat Fizik, modul konstruk SPM, dan buku anekdot rasmi Jabatan Pendidikan Negeri Perak.
-        </p>
-      </div>
-
-      <div class="stripe-books-grid">
-        
-        <!-- Book 1: CheatNote T4 -->
-        <div class="stripe-book-card stripe-reveal">
-          <div class="stripe-book-cover-box">
-            <img src="assets/images/book_cheatnote_t4.jpg" alt="CheatNote Fizik T4" class="stripe-book-cover-img" onerror="this.src='assets/images/cover_full.jpg'">
-          </div>
-          <div>
-            <div class="award-tier-tag">ONE TOUCH CREATIVE • 2024</div>
-            <h4 style="font-size: 16px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">CheatNote Fizik Tingkatan 4</h4>
-            <p style="font-size: 13px; color: var(--text-slate); line-height: 1.45; margin-bottom: 14px;">Nota ringkas dan infografik padat ulang kaji pantas murid SPM.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 12px; font-size: 12px; width: fit-content;" onclick="window.openDarkroomLightbox(7, 'Senarai Penulisan M/S 7')">Semak M/S 7 →</button>
-        </div>
-
-        <!-- Book 2: CheatNote T5 -->
-        <div class="stripe-book-card stripe-reveal stripe-reveal-delay-1">
-          <div class="stripe-book-cover-box">
-            <img src="assets/images/book_cheatnote_t5.jpg" alt="CheatNote Fizik T5" class="stripe-book-cover-img" onerror="this.src='assets/images/cover_full.jpg'">
-          </div>
-          <div>
-            <div class="award-tier-tag">ONE TOUCH CREATIVE • 2024</div>
-            <h4 style="font-size: 16px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">CheatNote Fizik Tingkatan 5</h4>
-            <p style="font-size: 13px; color: var(--text-slate); line-height: 1.45; margin-bottom: 14px;">Ringkasan formula dan teknik menjawab soalan KBAT Fizik SPM.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 12px; font-size: 12px; width: fit-content;" onclick="window.openDarkroomLightbox(7, 'Senarai Penulisan M/S 7')">Semak M/S 7 →</button>
-        </div>
-
-        <!-- Book 3: Nilam T4 -->
-        <div class="stripe-book-card stripe-reveal stripe-reveal-delay-2">
-          <div class="stripe-book-cover-box">
-            <img src="assets/images/book_nilam_t4.jpg" alt="Modul Konstruk T4" class="stripe-book-cover-img" onerror="this.src='assets/images/cover_full.jpg'">
-          </div>
-          <div>
-            <div class="award-tier-tag">PENERBIT NILAM • 2025</div>
-            <h4 style="font-size: 16px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">Modul Konstruk Fizik T4</h4>
-            <p style="font-size: 13px; color: var(--text-slate); line-height: 1.45; margin-bottom: 14px;">Modul pengukuhan konsep mengikut konstruk pentaksiran SPM.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 12px; font-size: 12px; width: fit-content;" onclick="window.openDarkroomLightbox(7, 'Senarai Penulisan M/S 7')">Semak M/S 7 →</button>
-        </div>
-
-        <!-- Book 4: Nilam T5 -->
-        <div class="stripe-book-card stripe-reveal stripe-reveal-delay-3">
-          <div class="stripe-book-cover-box">
-            <img src="assets/images/book_nilam_t5.jpg" alt="Modul Konstruk T5" class="stripe-book-cover-img" onerror="this.src='assets/images/cover_full.jpg'">
-          </div>
-          <div>
-            <div class="award-tier-tag">PENERBIT NILAM • 2025</div>
-            <h4 style="font-size: 16px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">Modul Konstruk Fizik T5</h4>
-            <p style="font-size: 13px; color: var(--text-slate); line-height: 1.45; margin-bottom: 14px;">Latihan pengukuhan berstruktur menguasai kertas peperiksaan Fizik.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 12px; font-size: 12px; width: fit-content;" onclick="window.openDarkroomLightbox(7, 'Senarai Penulisan M/S 7')">Semak M/S 7 →</button>
-        </div>
-
-        <!-- Book 5: Rona-Rona Pendidik -->
-        <div class="stripe-book-card stripe-reveal" style="grid-column: span 2;">
-          <div>
-            <div class="award-tier-tag" style="color: var(--stripe-amber);">SYAHIDA HASSAN & JPN PERAK • 2026</div>
-            <h4 style="font-size: 18px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">Rona-Rona Pendidik: Anekdot Edufluencer KPM Perak</h4>
-            <p style="font-size: 14px; color: var(--text-slate); line-height: 1.5; margin-bottom: 14px;">Perkongsian pengalaman dan inspirasi pendidik era digital.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(75, 'Sijil Penulis Anekdot Edufluencers JPN Perak')">Lihat Sijil Penghargaan Penulis M/S 75 →</button>
-        </div>
-
-        <!-- Book 6: MyHomePhysicsLab T4 & T5 -->
-        <div class="stripe-book-card stripe-reveal stripe-reveal-delay-1" style="grid-column: span 2;">
-          <div>
-            <div class="award-tier-tag">MODUL AMALI HIBRID • 2020</div>
-            <h4 style="font-size: 18px; font-weight: 800; color: var(--stripe-dark); margin-bottom: 6px;">Modul Hibrid MyHomePhysicsLab Tingkatan 4 & 5</h4>
-            <p style="font-size: 14px; color: var(--text-slate); line-height: 1.5; margin-bottom: 14px;">Modul panduan 18 amali wajib Fizik di rumah dengan simulasi makmal maya interaktif.</p>
-          </div>
-          <button class="stripe-btn-pill stripe-btn-pill-ghost" style="padding: 6px 14px; font-size: 12.5px; width: fit-content;" onclick="window.openDarkroomLightbox(63, 'Modul Hibrid MyHomePhysicsLab')">Semak M/S 63 - 70 →</button>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       9. STRIPE FILE VAULT (96 MUKA SURAT SIJIL & BUKTI)
-       ========================================================================== -->
-  <section class="section" id="pustaka">
-    <div class="container">
-      
-      <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">PUSTAKA BUKTI DOKUMEN</div>
-        <h2 class="stripe-section-title">96 Muka Surat Dokumen & <span class="stripe-gradient-text">Sijil Sokongan.</span></h2>
-        <p class="stripe-section-desc">
-          Akses resolusi tinggi kepada keseluruhan fail pencalonan, sijil anugerah, surat pelantikan panel pakar, dan modul amali.
-        </p>
-      </div>
-
-      <!-- Toolbar -->
-      <div class="stripe-vault-toolbar stripe-reveal">
-        <div class="vault-filter-chips">
-          <button class="vault-chip-btn active" onclick="window.filterStripeVault('all', this)">Semua Bukti</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('borang', this)">Borang Rasmi (M/S 1-16)</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('antarabangsa', this)">Antarabangsa</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('kebangsaan', this)">Kebangsaan & APC</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('panel', this)">Panel Pakar & BPK</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('negeri', this)">Negeri & Daerah</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('modul', this)">Modul Amali (M/S 63-70)</button>
-        </div>
-
-        <input type="text" class="vault-search-box" placeholder="Cari tajuk sijil / m.surat..." oninput="window.searchStripeVault(this)">
-      </div>
-
-      <!-- Grid -->
-      <div class="stripe-photos-grid" id="vault-photos-grid">
-        <!-- Rendered by gallery-modal.js -->
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       10. STRIPE VIDEO THEATER (PERSEMBAHAN CALON)
-       ========================================================================== -->
-  <section class="section section-dark" id="cinema">
-    <div class="container">
-      
-      <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">TEATER SINEMATIK</div>
-        <h2 class="stripe-section-title">Video Persembahan <span class="stripe-gradient-text">Pencipta Kandungan.</span></h2>
-        <p class="stripe-section-desc">
-          Persembahan video rasmi calon (durasi bawah 15 minit) memperkenalkan diri, demonstrasi ekosistem digital, impak bilik darjah dan visi masa depan.
-        </p>
+        <div class="section-eyebrow">BAHAGIAN 8</div>
+        <h2 class="section-title">Video Persembahan Calon</h2>
+        <p class="section-desc">Video persembahan rasmi memperkenalkan diri, demonstrasi ekosistem digital, impak bilik darjah dan visi masa depan.</p>
       </div>
 
       <div class="stripe-video-container stripe-reveal">
-        
         <div class="video-frame-aspect">
           <video id="cinema-video" class="video-element-tag" controls poster="assets/images/cover_full.jpg" preload="metadata">
             <source src="../ABDUL HALIM_ARA 3001.mp4" type="video/mp4">
@@ -854,110 +545,75 @@
         <div class="video-chapters-tray">
           <div class="video-tray-heading">Penanda Bab Video (Klik untuk Menonton):</div>
           <div class="video-chips-row">
-            
             <button class="video-chapter-button" onclick="window.seekVideoChapter(0)">
               <div class="chapter-time-code">00:00</div>
               <div class="chapter-label-text">Falsafah Teknologi PdP</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(25)">
               <div class="chapter-time-code">00:25</div>
               <div class="chapter-label-text">Profil & Apple Learning Coach</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(75)">
               <div class="chapter-time-code">01:15</div>
               <div class="chapter-label-text">MyPhysicsTutor & Makmal Maya</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(180)">
               <div class="chapter-time-code">03:00</div>
               <div class="chapter-label-text">PhysPlot & Analisis Graf SPM</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(285)">
               <div class="chapter-time-code">04:45</div>
               <div class="chapter-label-text">HeadcountPro & Intervensi ETR</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(390)">
               <div class="chapter-time-code">06:30</div>
               <div class="chapter-label-text">CIDS Suites Pro (Automasi RPH)</div>
             </button>
-
             <button class="video-chapter-button" onclick="window.seekVideoChapter(510)">
               <div class="chapter-time-code">08:30</div>
               <div class="chapter-label-text">Impak & Visi Masa Depan</div>
             </button>
-
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
   <!-- ==========================================================================
-       11. PERAKUAN & INTEGRITI RASMI
+       10. PUSTAKA BUKTI & SIJIL 96 MUKA SURAT
        ========================================================================== -->
-  <section class="section" style="background: #ffffff; border-top: 1px solid var(--border-light);">
+  <section class="section" id="pustaka">
     <div class="container">
-      
       <div class="stripe-reveal">
-        <div class="stripe-section-eyebrow">INTEGRITI & SOKONGAN</div>
-        <h2 class="stripe-section-title">Perakuan Rasmi & <span class="stripe-gradient-text">Pengesahan Institusi.</span></h2>
+        <div class="section-eyebrow">PUSTAKA DOKUMEN</div>
+        <h2 class="section-title">96 Muka Surat Dokumen & Sijil Sokongan</h2>
+        <p class="section-desc">Akses resolusi tinggi kepada fail borang pencalonan rasmi, sijil anugerah, surat pelantikan, dan modul amali.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 36px;">
-        
-        <div class="stripe-award-card stripe-reveal">
-          <div>
-            <div style="font-size: 24px; margin-bottom: 12px;">✍️</div>
-            <div class="award-tier-tag">PERAKUAN CALON</div>
-            <h4 class="award-main-title">Abdul Halim bin Roslan</h4>
-            <p class="award-org-text">
-              Segala maklumat adalah benar, dokumen adalah sah, dan bahan digital yang dihasilkan adalah asli tanpa unsur peniruan.
-            </p>
-          </div>
-          <span style="font-size: 12px; font-family: var(--font-mono); color: var(--stripe-blurple);">860830-38-6441 • 10 OGOS 2026</span>
+      <div class="stripe-vault-toolbar stripe-reveal">
+        <div class="vault-filter-chips">
+          <button class="vault-chip-btn active" onclick="window.filterStripeVault('all', this)">Semua Bukti</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('borang', this)">Borang Rasmi (M/S 1-16)</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('antarabangsa', this)">Antarabangsa</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('kebangsaan', this)">Kebangsaan & APC</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('panel', this)">Panel Pakar & BPK</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('negeri', this)">Negeri & Daerah</button>
+          <button class="vault-chip-btn" onclick="window.filterStripeVault('modul', this)">Modul Amali (M/S 63-70)</button>
         </div>
-
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-1">
-          <div>
-            <div style="font-size: 24px; margin-bottom: 12px;">🏫</div>
-            <div class="award-tier-tag" style="color: var(--stripe-violet);">SOKONGAN PENGETUA</div>
-            <h4 class="award-main-title">SMK Agama Kerian, Perak</h4>
-            <p class="award-org-text">
-              Menyokong penuh pencalonan atas komitmen tinggi menghasilkan ekosistem digital yang memberi impak besar kepada pembelajaran murid.
-            </p>
-          </div>
-          <span style="font-size: 12px; color: var(--text-slate);">Pengurusan Sekolah Menengah Kebangsaan Agama Kerian</span>
-        </div>
-
-        <div class="stripe-award-card stripe-reveal stripe-reveal-delay-2">
-          <div>
-            <div style="font-size: 24px; margin-bottom: 12px;">🏛️</div>
-            <div class="award-tier-tag" style="color: var(--stripe-emerald);">PERAKUAN JPN PERAK</div>
-            <h4 class="award-main-title">Jabatan Pendidikan Negeri Perak</h4>
-            <p class="award-org-text">
-              Memperakukan pencalonan bagi Anugerah Khas Pendidikan: Pencipta Kandungan Digital Sempena Majlis Apresiasi Guru Negeri Perak 2026.
-            </p>
-          </div>
-          <span style="font-size: 12px; color: var(--text-slate);">Pengarah Pendidikan Negeri Perak</span>
-        </div>
-
+        <input type="text" class="vault-search-box" placeholder="Cari tajuk sijil / m.surat..." oninput="window.searchStripeVault(this)">
       </div>
 
+      <div class="stripe-photos-grid" id="vault-photos-grid">
+        <!-- Rendered by gallery-modal.js -->
+      </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       12. STRIPE FOOTER
+       11. STRIPE FOOTER
        ========================================================================== -->
   <footer class="stripe-footer">
     <div class="container">
-      
       <div class="footer-nav-columns">
         <div>
           <div class="footer-col-head">Ekosistem Aplikasi</div>
@@ -974,21 +630,21 @@
         <div>
           <div class="footer-col-head">Pencapaian & Inovasi</div>
           <ul class="footer-link-list">
-            <li><a href="#pencapaian" class="footer-nav-link">Emas IIEF 2025</a></li>
-            <li><a href="#pencapaian" class="footer-nav-link">Perak InnoZilla USM</a></li>
-            <li><a href="#pencapaian" class="footer-nav-link">Panel Pakar UKM</a></li>
-            <li><a href="#pencapaian" class="footer-nav-link">Panel MOBIM BPK</a></li>
-            <li><a href="#pencapaian" class="footer-nav-link">Apple Learning Coach</a></li>
+            <li><a href="#anugerah" class="footer-nav-link">Emas IIEF 2025</a></li>
+            <li><a href="#antarabangsa" class="footer-nav-link">Perak InnoZilla USM</a></li>
+            <li><a href="#kebangsaan" class="footer-nav-link">Panel Pakar UKM</a></li>
+            <li><a href="#kebangsaan" class="footer-nav-link">Panel MOBIM BPK</a></li>
+            <li><a href="#antarabangsa" class="footer-nav-link">Apple Learning Coach</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-head">Penerbitan & Bukti</div>
           <ul class="footer-link-list">
-            <li><a href="#penerbitan" class="footer-nav-link">7 Modul Fizik</a></li>
-            <li><a href="#penerbitan" class="footer-nav-link">Anekdot Edufluencers</a></li>
+            <li><a href="#pustaka" class="footer-nav-link">7 Modul Fizik</a></li>
+            <li><a href="#negeri" class="footer-nav-link">Anekdot Edufluencers</a></li>
             <li><a href="#pustaka" class="footer-nav-link">96 M/S Sijil Sokongan</a></li>
-            <li><a href="#cinema" class="footer-nav-link">Tonton Video Persembahan</a></li>
+            <li><a href="#video" class="footer-nav-link">Tonton Video Persembahan</a></li>
           </ul>
         </div>
 
@@ -996,8 +652,7 @@
           <div class="footer-col-head">Maklumat Calon</div>
           <ul class="footer-link-list">
             <li><span style="color: #ffffff; font-weight: 600;">Abdul Halim bin Roslan</span></li>
-            <li><span style="color: var(--text-light);">g-41192875@moe-dl.edu.my</span></li>
-            <li><span style="color: var(--text-light);">011-12345456</span></li>
+            <li><span style="color: var(--text-light);">abdulhalim@smkakerian.edu.my</span></li>
             <li><span style="color: var(--text-light);">SMK Agama Kerian, Perak</span></li>
           </ul>
         </div>
@@ -1005,22 +660,20 @@
 
       <div class="footer-bottom-bar">
         <div>Copyright &copy; 2026 Abdul Halim bin Roslan. All rights reserved.</div>
-        <div>Prasarana Digital Pendidikan • Majlis Apresiasi Guru Negeri Perak 2026</div>
+        <div>Portal Pencalonan Anugerah Khas Pendidikan: Pencipta Kandungan Digital • Majlis Apresiasi Guru Negeri Perak 2026</div>
       </div>
-
     </div>
   </footer>
 
   <!-- ==========================================================================
-       13. STRIPE FULLSCREEN LIGHTBOX MODAL (96 PAGES & POSTERS)
+       12. STRIPE FULLSCREEN LIGHTBOX MODAL (96 PAGES & POSTERS)
        ========================================================================== -->
   <div class="stripe-darkroom-modal" id="stripe-lightbox-modal">
     <div class="stripe-modal-shell">
-      
       <div class="stripe-modal-header">
         <div>
           <h4 class="modal-header-title" id="lightbox-title">Dokumen Lampiran</h4>
-          <span style="font-size: 12px; font-family: var(--font-mono); color: var(--stripe-blurple);" id="lightbox-page-num">Muka Surat 1 / 96</span>
+          <span style="font-size: 12px; font-family: var(--font-mono); color: var(--brand-indigo);" id="lightbox-page-num">Muka Surat 1 / 96</span>
         </div>
         <button class="modal-close-btn" onclick="window.closeDarkroom()" title="Tutup (Esc)">✕</button>
       </div>
@@ -1033,14 +686,11 @@
         <button class="stripe-btn-pill stripe-btn-pill-ghost" onclick="window.navigateDarkroom(-1)">
           <span>← Sebelumnya</span>
         </button>
-
         <span style="font-size: 12px; color: var(--text-muted);">Gunakan kekunci anak panah [ ← ] dan [ → ] atau [ Esc ]</span>
-
         <button class="stripe-btn-pill" onclick="window.navigateDarkroom(1)">
           <span>Seterusnya →</span>
         </button>
       </div>
-
     </div>
   </div>
 
