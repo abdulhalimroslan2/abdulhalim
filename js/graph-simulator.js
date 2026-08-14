@@ -1,6 +1,6 @@
 /**
  * PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
- * PHYSPLOT PRO STUDIO - APPLE LAB ENGINE
+ * PHYSPLOT PRO STUDIO - STRIPE DEVELOPER PLAYGROUND ENGINE
  */
 
 (function () {
@@ -74,8 +74,8 @@
     function mapX(x) { return padLeft + (x / maxX) * plotW; }
     function mapY(y) { return padTop + plotH - (y / maxY) * plotH; }
 
-    // Apple Clean Dark Grid
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+    // Stripe Grid (Clean Dark Cyan/Indigo grid lines)
+    ctx.strokeStyle = 'rgba(0, 212, 255, 0.08)';
     ctx.lineWidth = 1;
 
     for (let x = 0; x <= maxX; x += 0.05) {
@@ -95,7 +95,7 @@
     }
 
     // Axes
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.moveTo(padLeft, padTop);
@@ -104,7 +104,7 @@
     ctx.stroke();
 
     // Axis Labels
-    ctx.fillStyle = '#86868b';
+    ctx.fillStyle = '#adbdcc';
     ctx.font = '11px -apple-system, sans-serif';
     ctx.textAlign = 'right';
     ctx.textBaseline = 'middle';
@@ -122,8 +122,8 @@
     }
 
     // Axis Titles
-    ctx.fillStyle = '#f5f5f7';
-    ctx.font = '500 12px -apple-system, sans-serif';
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '600 12px -apple-system, sans-serif';
     ctx.fillText('Arus, I / A', padLeft + plotW / 2, padTop + plotH + 28);
 
     ctx.save();
@@ -132,9 +132,9 @@
     ctx.fillText('Beza Keupayaan, V / V', 0, 0);
     ctx.restore();
 
-    // Best Fit Line
+    // Best Fit Line (Stripe Violet / Cyan gradient)
     const reg = linearRegression(dataset);
-    ctx.strokeStyle = '#a855f7';
+    ctx.strokeStyle = '#635bff';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
     ctx.moveTo(mapX(0), mapY(reg.c));
@@ -146,7 +146,7 @@
     const p2 = { x: 0.45, y: reg.m * 0.45 + reg.c };
 
     ctx.setLineDash([4, 4]);
-    ctx.strokeStyle = 'rgba(41, 151, 255, 0.7)';
+    ctx.strokeStyle = 'rgba(0, 212, 255, 0.8)';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.moveTo(mapX(p1.x), mapY(p1.y));
@@ -155,12 +155,12 @@
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Data Points
+    // Data Points (Cyan Crosses)
     dataset.forEach((p) => {
       const px = mapX(p.I);
       const py = mapY(p.V);
 
-      ctx.strokeStyle = '#2997ff';
+      ctx.strokeStyle = '#00d4ff';
       ctx.lineWidth = 2.5;
       const size = 5;
 
@@ -175,9 +175,9 @@
 
   function updateStudioStats() {
     const reg = linearRegression(dataset);
-    const mEl = document.getElementById('apple-calc-m');
-    const cEl = document.getElementById('apple-calc-c');
-    const rEl = document.getElementById('apple-calc-r');
+    const mEl = document.getElementById('stripe-calc-m');
+    const cEl = document.getElementById('stripe-calc-c');
+    const rEl = document.getElementById('stripe-calc-r');
 
     if (mEl) mEl.textContent = `${reg.m.toFixed(2)} V A⁻¹`;
     if (cEl) cEl.textContent = `${reg.c.toFixed(2)} V`;

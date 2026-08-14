@@ -1,6 +1,6 @@
 /**
  * PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
- * APPLE PHOTOS MEDIA GRID & DARKROOM LIGHTBOX (96 PAGES & OFFICIAL POSTERS)
+ * STRIPE-STYLE FILE VAULT & DARKROOM LIGHTBOX (96 PAGES & OFFICIAL POSTERS)
  */
 
 (function () {
@@ -68,7 +68,6 @@
   let searchQuery = '';
   let activeIndex = 0;
   let isCustomImage = false;
-  let customSrc = '';
 
   function renderGrid() {
     const grid = document.getElementById('vault-photos-grid');
@@ -86,37 +85,37 @@
     grid.innerHTML = filtered.map((doc) => {
       const pageStr = String(doc.page).padStart(2, '0');
       return `
-        <div class="photo-doc-card apple-reveal" onclick="window.openDarkroomLightbox(${doc.page}, '${doc.title.replace(/'/g, "\\'")}')">
-          <div class="photo-thumb-box">
-            <span class="photo-page-pill">M/S ${doc.page}</span>
-            <img src="assets/certs/page_${pageStr}.jpg" alt="${doc.title}" class="photo-thumb-img" loading="lazy" onerror="this.src='assets/images/cover_full.jpg'">
+        <div class="stripe-doc-item stripe-reveal" onclick="window.openDarkroomLightbox(${doc.page}, '${doc.title.replace(/'/g, "\\'")}')">
+          <div class="doc-thumb-holder">
+            <span class="doc-page-badge">M/S ${doc.page}</span>
+            <img src="assets/certs/page_${pageStr}.jpg" alt="${doc.title}" class="doc-thumb-img" loading="lazy" onerror="this.src='assets/images/cover_full.jpg'">
           </div>
-          <div class="photo-card-info">
-            <h5 class="photo-card-title">${doc.title}</h5>
+          <div class="doc-info-block">
+            <h5 class="doc-title-text">${doc.title}</h5>
           </div>
         </div>
       `;
     }).join('');
   }
 
-  window.filterAppleVault = function (cat, btn) {
+  window.filterStripeVault = function (cat, btn) {
     currentCategory = cat;
-    document.querySelectorAll('.vault-segment-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.vault-chip-btn').forEach(b => b.classList.remove('active'));
     if (btn) btn.classList.add('active');
     renderGrid();
   };
 
-  window.searchAppleVault = function (input) {
+  window.searchStripeVault = function (input) {
     searchQuery = input.value.trim();
     renderGrid();
   };
 
   window.openDarkroomLightbox = function (pageNumber, title) {
     isCustomImage = false;
-    const modal = document.getElementById('darkroom-modal');
-    const img = document.getElementById('darkroom-img');
-    const titleEl = document.getElementById('darkroom-title');
-    const pageEl = document.getElementById('darkroom-page-num');
+    const modal = document.getElementById('stripe-lightbox-modal');
+    const img = document.getElementById('lightbox-img');
+    const titleEl = document.getElementById('lightbox-title');
+    const pageEl = document.getElementById('lightbox-page-num');
 
     activeIndex = documents.findIndex(d => d.page === pageNumber);
     if (activeIndex === -1) activeIndex = 0;
@@ -134,11 +133,10 @@
 
   window.openPosterLightbox = function (src, title) {
     isCustomImage = true;
-    customSrc = src;
-    const modal = document.getElementById('darkroom-modal');
-    const img = document.getElementById('darkroom-img');
-    const titleEl = document.getElementById('darkroom-title');
-    const pageEl = document.getElementById('darkroom-page-num');
+    const modal = document.getElementById('stripe-lightbox-modal');
+    const img = document.getElementById('lightbox-img');
+    const titleEl = document.getElementById('lightbox-title');
+    const pageEl = document.getElementById('lightbox-page-num');
 
     if (img) img.src = src;
     if (titleEl) titleEl.textContent = title || 'Poster Rasmi Inovasi';
@@ -159,13 +157,13 @@
   };
 
   window.closeDarkroom = function () {
-    const modal = document.getElementById('darkroom-modal');
+    const modal = document.getElementById('stripe-lightbox-modal');
     if (modal) modal.classList.remove('active');
     document.body.style.overflow = 'auto';
   };
 
   document.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('darkroom-modal');
+    const modal = document.getElementById('stripe-lightbox-modal');
     if (!modal || !modal.classList.contains('active')) return;
 
     if (e.key === 'Escape') window.closeDarkroom();
