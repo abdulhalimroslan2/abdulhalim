@@ -1,0 +1,489 @@
+/* ==========================================================================
+   PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
+   CALON: ABDUL HALIM BIN ROSLAN (SMK AGAMA KERIAN, PERAK)
+   APPLE INC. FLAGSHIP PRO DESIGN SYSTEM & TOKENS
+   ========================================================================== */
+
+:root {
+  /* Apple Signature Color Palette (Pitch Black & Titanium Dark Mode) */
+  --apple-black: #000000;
+  --apple-bg: #000000;
+  --apple-card-bg: #161617;
+  --apple-card-elevated: #1d1d1f;
+  --apple-card-hover: #242426;
+  --apple-subnav-bg: rgba(0, 0, 0, 0.82);
+  --apple-nav-bg: rgba(22, 22, 23, 0.8);
+
+  /* Apple Pro Accents */
+  --apple-blue: #2997ff;
+  --apple-blue-hover: #0077ed;
+  --apple-purple: #a855f7;
+  --apple-violet: #c084fc;
+  --apple-cyan: #67e8f9;
+  --apple-green: #30d158;
+  --apple-orange: #ff9f0a;
+  --apple-gold: #ffd60a;
+  --apple-pink: #ff375f;
+
+  /* Apple Gradients */
+  --apple-grad-text: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+  --apple-grad-hero: linear-gradient(135deg, #ffffff 20%, #c084fc 60%, #2997ff 100%);
+  --apple-grad-purple: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  --apple-grad-blue: linear-gradient(135deg, #2997ff 0%, #67e8f9 100%);
+  --apple-grad-card: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  /* Apple Typography Scale */
+  --font-apple: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Text Colors */
+  --text-white: #f5f5f7;
+  --text-pure: #ffffff;
+  --text-gray: #86868b;
+  --text-gray-light: #a1a1a6;
+  --text-gray-dark: #6e6e73;
+
+  /* Apple Borders & Shadows */
+  --apple-border: rgba(255, 255, 255, 0.12);
+  --apple-border-subtle: rgba(255, 255, 255, 0.07);
+  --apple-border-focus: rgba(168, 85, 247, 0.5);
+  --apple-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --apple-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --apple-shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.8);
+  --apple-glow-purple: 0 0 40px rgba(168, 85, 247, 0.25);
+  --apple-glow-blue: 0 0 40px rgba(41, 151, 255, 0.25);
+
+  /* Radius & Metrics */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-bento: 30px;
+  --radius-pill: 980px;
+
+  --nav-height: 48px;
+  --subnav-height: 52px;
+  --container-width: 1280px;
+
+  /* Transitions */
+  --apple-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --apple-trans-fast: 0.2s var(--apple-ease);
+  --apple-trans-normal: 0.35s var(--apple-ease);
+  --apple-trans-slow: 0.6s var(--apple-ease);
+}
+
+/* ==========================================================================
+   RESET & GLOBAL BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--apple-black);
+  color: var(--text-white);
+  font-family: var(--font-apple);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--apple-black);
+  color: var(--text-white);
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  overflow-x: hidden;
+}
+
+/* Apple Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--apple-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #333336;
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #55555a;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.4);
+  color: var(--text-pure);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--apple-trans-fast);
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   CONTAINER & SECTION TYPOGRAPHY (APPLE KEYNOTE SCALE)
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto 72px auto;
+}
+
+.apple-eyebrow {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--apple-purple);
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.apple-eyebrow-blue {
+  color: var(--apple-blue);
+}
+
+.apple-eyebrow-gold {
+  color: var(--apple-gold);
+}
+
+.apple-headline {
+  font-size: clamp(38px, 5.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -0.03em;
+  color: var(--text-white);
+  margin-bottom: 20px;
+}
+
+.apple-headline-gradient {
+  background: var(--apple-grad-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apple-subhead {
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--text-gray);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. APPLE GLOBAL NAVIGATION BAR (48px)
+   ========================================================================== */
+
+.apple-global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.apple-global-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.apple-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  color: var(--text-white);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.apple-logo-icon {
+  font-size: 19px;
+  line-height: 1;
+  color: #fff;
+}
+
+.apple-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.apple-nav-link {
+  font-size: 12px;
+  color: var(--text-gray-light);
+  letter-spacing: -0.01em;
+  transition: var(--apple-trans-fast);
+}
+
+.apple-nav-link:hover {
+  color: var(--text-white);
+}
+
+.apple-nav-action-pill {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--apple-blue);
+  color: #ffffff;
+  transition: var(--apple-trans-fast);
+}
+
+.apple-nav-action-pill:hover {
+  background: var(--apple-blue-hover);
+}
+
+/* ==========================================================================
+   2. APPLE LOCAL STICKY SUB-NAVIGATION (52px)
+   ========================================================================== */
+
+.apple-subnav {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  height: var(--subnav-height);
+  background: var(--apple-subnav-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  transition: var(--apple-trans-fast);
+}
+
+.apple-subnav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.subnav-title-group {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.subnav-candidate-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.015em;
+}
+
+.subnav-candidate-meta {
+  font-size: 12px;
+  color: var(--text-gray);
+  font-weight: 400;
+}
+
+.subnav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subnav-link {
+  font-size: 12px;
+  color: var(--text-gray-light);
+  transition: var(--apple-trans-fast);
+}
+
+.subnav-link:hover {
+  color: var(--apple-blue);
+}
+
+.apple-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--apple-blue);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  transition: var(--apple-trans-fast);
+  border: none;
+}
+
+.apple-btn-pill:hover {
+  background: var(--apple-blue-hover);
+  transform: scale(1.02);
+}
+
+.apple-btn-pill-secondary {
+  background: #1d1d1f;
+  color: var(--apple-blue);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.apple-btn-pill-secondary:hover {
+  background: #2d2d2f;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.apple-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--apple-blue);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.apple-link-arrow:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FOOTER (APPLE CLEAN MULTI-COLUMN)
+   ========================================================================== */
+
+.apple-footer {
+  background: #101012;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 56px 0 40px 0;
+  font-size: 12px;
+  color: var(--text-gray-dark);
+}
+
+.footer-disclaimer {
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.6;
+}
+
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.footer-col-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-gray-light);
+  margin-bottom: 14px;
+}
+
+.footer-col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-link {
+  color: var(--text-gray);
+  transition: var(--apple-trans-fast);
+}
+
+.footer-col-link:hover {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+.footer-legal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BASE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .apple-nav-menu {
+    display: none;
+  }
+  .footer-nav-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .subnav-candidate-meta {
+    display: none;
+  }
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-legal-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
