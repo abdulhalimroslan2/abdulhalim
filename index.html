@@ -15,9 +15,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/awards-dashboard.css">
 </head>
 <body>
-
+  <div id="parallax-bg"></div>
   <!-- ==========================================================================
        1. NAVIGATION BAR (EXACT MOCKUP HEADER)
        ========================================================================== -->
@@ -39,9 +40,6 @@
       </ul>
 
       <div>
-        <a href="#pustaka" class="nav-juri-btn" onclick="window.openDarkroomLightbox(1, 'M/S 1: Muka Depan Rasmi Borang Pencalonan')">
-          <span>🔒 Log Masuk Juri</span>
-        </a>
       </div>
     </div>
   </nav>
@@ -59,8 +57,8 @@
       <div class="profile-hero-grid stripe-reveal">
         
         <!-- Left: Candidate Portrait Card -->
-        <div class="profile-portrait-card" title="Klik untuk paparan penuh" onclick="window.openPosterLightbox('assets/images/halim_portrait_hd.png', 'Abdul Halim bin Roslan — Guru Cemerlang Fizik')">
-          <img src="assets/images/halim_portrait_hd.png" alt="Abdul Halim bin Roslan" class="profile-portrait-img">
+        <div class="profile-portrait-card" title="Klik untuk paparan penuh" onclick="window.openPosterLightbox('assets/images/halim_portrait_new.jpg', 'Abdul Halim bin Roslan — Guru Cemerlang Fizik')">
+          <img src="assets/images/halim_portrait_new.jpg" alt="Abdul Halim bin Roslan" class="profile-portrait-img">
         </div>
 
         <!-- Right: Candidate Info Block -->
@@ -72,28 +70,23 @@
           <!-- Meta Items with Icons -->
           <div class="profile-meta-list">
             <div class="profile-meta-item">
-              <span class="meta-icon-wrapper">👤</span>
               <span>Guru Fizik</span>
             </div>
             <div class="profile-meta-item">
-              <span class="meta-icon-wrapper">🏛️</span>
               <span>SMK Agama Kerian, Perak</span>
             </div>
             <div class="profile-meta-item">
-              <span class="meta-icon-wrapper">✉️</span>
               <span>abdulhalim@smkakerian.edu.my</span>
             </div>
             <div class="profile-meta-item">
-              <span class="meta-icon-wrapper">📍</span>
               <span>Kerian, Perak, Malaysia</span>
             </div>
           </div>
 
           <!-- Lavender Quote Box -->
           <div class="profile-quote-card">
-            <div class="quote-symbol">❝</div>
             <div class="quote-text-content">
-              Memperkasa pendidikan digital, mencipta impak berterusan untuk pembelajaran yang lebih bermakna.
+              "Memperkasa pendidikan digital, mencipta impak berterusan untuk pembelajaran yang lebih bermakna."
             </div>
           </div>
         </div>
@@ -103,7 +96,6 @@
       <!-- Floating 5-Metric Stats Bar -->
       <div class="profile-stats-bar stripe-reveal stripe-reveal-delay-1">
         <div class="stat-item-col">
-          <div class="stat-icon-circ">⭐</div>
           <div>
             <div class="stat-num-val">18+</div>
             <div class="stat-label-desc">Tahun Pengalaman</div>
@@ -111,7 +103,6 @@
         </div>
 
         <div class="stat-item-col">
-          <div class="stat-icon-circ">🎓</div>
           <div>
             <div class="stat-num-val">25,000+</div>
             <div class="stat-label-desc">Murid Dibimbing</div>
@@ -119,7 +110,6 @@
         </div>
 
         <div class="stat-item-col">
-          <div class="stat-icon-circ">📑</div>
           <div>
             <div class="stat-num-val">120+</div>
             <div class="stat-label-desc">Bahan Digital Dihasilkan</div>
@@ -127,7 +117,6 @@
         </div>
 
         <div class="stat-item-col">
-          <div class="stat-icon-circ">🌐</div>
           <div>
             <div class="stat-num-val">15+</div>
             <div class="stat-label-desc">Program & Projek</div>
@@ -135,7 +124,6 @@
         </div>
 
         <div class="stat-item-col">
-          <div class="stat-icon-circ">🚀</div>
           <div>
             <div class="stat-num-val">1</div>
             <div class="stat-label-desc">Matlamat: Pendidikan Berkualiti</div>
@@ -150,7 +138,6 @@
         <div class="profile-bento-card">
           <div>
             <div class="bento-header-title">
-              <span class="bento-header-icon">👤</span>
               <span>Tentang Saya</span>
             </div>
             <p class="bento-paragraph-text">
@@ -167,7 +154,6 @@
         <div class="profile-bento-card">
           <div>
             <div class="bento-header-title">
-              <span class="bento-header-icon">🎯</span>
               <span>Fokus Kepakaran</span>
             </div>
             <ul class="bento-checklist">
@@ -195,7 +181,6 @@
         <div class="profile-bento-card">
           <div>
             <div class="bento-header-title">
-              <span class="bento-header-icon">💡</span>
               <span>Pendekatan Saya</span>
             </div>
             <p class="bento-paragraph-text">
@@ -213,7 +198,6 @@
       <!-- Bottom 4-Column Credentials Bar -->
       <div class="profile-credentials-bar stripe-reveal stripe-reveal-delay-3">
         <div class="credential-item">
-          <div class="credential-icon-box"></div>
           <div>
             <div class="credential-title-text">Apple Learning Coach</div>
             <div class="credential-sub-text">Apple Education</div>
@@ -221,7 +205,6 @@
         </div>
 
         <div class="credential-item">
-          <div class="credential-icon-box">📚</div>
           <div>
             <div class="credential-title-text">GC Fizik</div>
             <div class="credential-sub-text">Guru Cemerlang Fizik</div>
@@ -229,7 +212,6 @@
         </div>
 
         <div class="credential-item">
-          <div class="credential-icon-box">🎨</div>
           <div>
             <div class="credential-title-text">Edufluencer KPM 4.0</div>
             <div class="credential-sub-text">Komuniti Pendidikan Digital</div>
@@ -237,7 +219,6 @@
         </div>
 
         <div class="credential-item">
-          <div class="credential-icon-box">👥</div>
           <div>
             <div class="credential-title-text">YDP MGC Kerian</div>
             <div class="credential-sub-text">Sesi 2026</div>
@@ -251,41 +232,190 @@
   <!-- ==========================================================================
        3. ROADMAP: ANUGERAH & PENGIKTIRAFAN
        ========================================================================== -->
-  <section class="section" id="anugerah">
+  <section class="section section-awards-dashboard" id="anugerah">
     <div class="container">
-      <div class="stripe-reveal">
-        <div class="section-eyebrow">BAHAGIAN 2</div>
-        <h2 class="section-title">Anugerah & Pengiktirafan</h2>
-        <p class="section-desc">Pencapaian berprestij di peringkat Antarabangsa, Kebangsaan, Negeri, dan Daerah.</p>
+      
+      <!-- Top Hero Dashboard -->
+      <div class="awards-dashboard-hero stripe-reveal">
+        <div class="trophy-showcase">
+          <img src="assets/images/golden_trophy_3d.jpg" alt="Golden Trophy" class="trophy-img">
+        </div>
+        <div class="awards-hero-text">
+          <h1 class="awards-main-title">Anugerah</h1>
+          <h2 class="awards-sub-title">Awards & Recognitions</h2>
+          <p class="awards-desc">
+            Pengiktirafan dan anugerah atas kecemerlangan, inovasi dan sumbangan dalam bidang pendidikan dan digital.
+            <br><span class="awards-desc-en">Recognition and awards for excellence, innovation and contribution in education and digital.</span>
+          </p>
+        </div>
+        <div class="awards-quote-box">
+          <div class="quote-mark">❝</div>
+          <p>"Dedikasi, inovasi dan komitmen melahirkan pengiktirafan yang bermakna."</p>
+        </div>
       </div>
 
-      <div class="bento-grid-3col stripe-reveal">
-        <div class="standard-bento-card">
+      <!-- Awards Grid (Re-introduced) -->
+      <div class="bento-grid-3col stripe-reveal stripe-reveal-delay-1" style="margin-top: 40px;">
+        <div class="standard-bento-card card-design-1">
           <div>
             <div class="card-badge-tag">ANTARABANGSA • 2025</div>
             <h3 class="card-heading-title">Anugerah Emas (Gold Award) IIEF</h3>
             <p class="card-body-text">International Innovation & Exhibition Fair (IIEF 2025) anjuran Kolej MARA Kulim.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(23, 'Sijil Emas IIEF 2025')">Lihat Sijil M/S 23 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(22, 'Sijil Emas IIEF 2025')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-1">
           <div>
             <div class="card-badge-tag">ANTARABANGSA • 2024 & 2025</div>
             <h3 class="card-heading-title">Anugerah Perak InnoZilla USM</h3>
             <p class="card-body-text">SDG Innovation Competition anjuran Universiti Sains Malaysia (USM).</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(24, 'Sijil InnoZilla USM')">Lihat Sijil M/S 24 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(24, 'Sijil InnoZilla USM')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-1">
           <div>
             <div class="card-badge-tag">KEBANGSAAN • KPM</div>
             <h3 class="card-heading-title">Anugerah Perkhidmatan Cemerlang</h3>
-            <p class="card-body-text">Penerima APC KPM sebanyak dua kali (Tahun 2016 & 2026).</p>
+            <p class="card-body-text">Penerima APC KPM bagi tahun 2016 dan 2026.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(19, 'Sijil APC KPM')">Lihat Sijil M/S 19 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(19, 'Sijil APC KPM')">Dokumen Sokongan ›</button>
         </div>
+        
+        <div class="standard-bento-card card-design-1">
+          <div>
+            <div class="card-badge-tag">NEGERI PERAK • 2020</div>
+            <h3 class="card-heading-title">Anugerah PdP Kreatif & Inovatif</h3>
+            <p class="card-body-text">Sempena Perayaan Hari Guru Peringkat Negeri Perak 2020.</p>
+          </div>
+          <!-- Placeholder button for Sijil PdP Kreatif -->
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(1, 'Sijil PdP Kreatif')">Dokumen Sokongan ›</button>
+        </div>
+      </div>
+      
+      <!-- Impactful Achievements Banner -->
+      <div class="impact-banner stripe-reveal stripe-reveal-delay-2" style="margin-top: 40px;">
+        <div class="impact-icon-wrapper">
+          <div class="impact-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+          </div>
+          <div class="impact-text-wrapper">
+            <h4 class="impact-title">Pencapaian Berimpak</h4>
+            <p class="impact-subtitle">Impactful Achievements</p>
+          </div>
+        </div>
+        <p class="impact-desc">
+          Setiap anugerah adalah hasil usaha, inovasi dan komitmen untuk pendidikan yang lebih baik.
+          <br><span class="impact-desc-en">Every award is the result of effort, innovation and commitment to a better education.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3B. ROADMAP: SUMBANGAN & PENGLIBATAN (FOLDERS)
+       ========================================================================== -->
+  <section class="section section-awards-dashboard" id="sumbangan" style="padding-top: 60px;">
+    <div class="container">
+      
+      <!-- Contributions Portfolio Section -->
+      <div class="awards-portfolio-header stripe-reveal">
+        <div class="portfolio-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+        </div>
+        <div>
+          <h3 class="portfolio-title">Sumbangan & Penglibatan</h3>
+          <p class="portfolio-subtitle">Contributions Portfolio</p>
+        </div>
+      </div>
+
+      <div class="folder-cards-grid stripe-reveal stripe-reveal-delay-1">
+        <!-- Card 1 -->
+        <a href="#antarabangsa" class="folder-card folder-purple">
+          <div class="folder-tab">
+          </div>
+          <div class="folder-content">
+            <div class="folder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h4 class="folder-title">Sumbangan<br>Antarabangsa</h4>
+            <p class="folder-subtitle">International Contribution</p>
+            <div class="folder-footer">
+              <span class="folder-stats">12 projek / awards</span>
+              <div class="folder-arrow">➔</div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Card 2 -->
+        <a href="#kebangsaan" class="folder-card folder-pink">
+          <div class="folder-tab">
+          </div>
+          <div class="folder-content">
+            <div class="folder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+            </div>
+            <h4 class="folder-title">Sumbangan<br>Kebangsaan</h4>
+            <p class="folder-subtitle">National Contribution</p>
+            <div class="folder-footer">
+              <span class="folder-stats">18 projek / awards</span>
+              <div class="folder-arrow">➔</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#negeri" class="folder-card folder-red">
+          <div class="folder-tab">
+          </div>
+          <div class="folder-content">
+            <div class="folder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
+            </div>
+            <h4 class="folder-title">Sumbangan<br>Negeri</h4>
+            <p class="folder-subtitle">State Contribution</p>
+            <div class="folder-footer">
+              <span class="folder-stats">14 projek / awards</span>
+              <div class="folder-arrow">➔</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#daerah" class="folder-card folder-orange">
+          <div class="folder-tab">
+          </div>
+          <div class="folder-content">
+            <div class="folder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"></path><path d="M6 18v-4"></path><path d="M10 18v-4"></path><path d="M14 18v-4"></path><path d="M18 18v-4"></path><path d="M4 14V10l8-6 8 6v4H4z"></path></svg>
+            </div>
+            <h4 class="folder-title">Sumbangan<br>Daerah</h4>
+            <p class="folder-subtitle">District Contribution</p>
+            <div class="folder-footer">
+              <span class="folder-stats">10 projek / awards</span>
+              <div class="folder-arrow">➔</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="#daerah" class="folder-card folder-blue">
+          <div class="folder-tab">
+          </div>
+          <div class="folder-content">
+            <div class="folder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"></path><path d="M4 19h16"></path><path d="M9 19v-5.5a1.5 1.5 0 0 1 3 0V19"></path><path d="M9 9h6"></path><path d="M9 13h6"></path></svg>
+            </div>
+            <h4 class="folder-title">Sumbangan<br>Institusi</h4>
+            <p class="folder-subtitle">Institution Contribution</p>
+            <div class="folder-footer">
+              <span class="folder-stats">16 projek / awards</span>
+              <div class="folder-arrow">➔</div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -297,27 +427,60 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">BAHAGIAN 3</div>
-        <h2 class="section-title">Sumbangan Antarabangsa</h2>
+        <h2 class="section-title">Sumbangan &amp; Penglibatan Antarabangsa</h2>
         <p class="section-desc">Penyertaan persidangan antarabangsa dan pensijilan bimbingan teknologi Apple South East Asia.</p>
       </div>
 
       <div class="bento-grid-2col stripe-reveal">
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-2">
           <div>
             <div class="card-badge-tag">GLOBAL SEA • 2026</div>
             <h3 class="card-heading-title">Apple Learning Coach (ALC)</h3>
             <p class="card-body-text">Pensijilan bimbingan profesional teknologi global oleh Apple South East Asia bagi menyokong transformasi pengajaran digital.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(60, 'Sijil Apple Learning Coach')">Lihat Sijil M/S 60 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(60, 'Sijil Apple Learning Coach')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+
+        <!-- IIEF 2025 -->
+        <div class="standard-bento-card card-design-2">
           <div>
-            <div class="card-badge-tag">ANTARABANGSA • 2024</div>
-            <h3 class="card-heading-title">Pembentang Inovasi IIEF Antarabangsa</h3>
-            <p class="card-body-text">Membentangkan kajian amali makmal maya MyHomePhysicsLab di persidangan inovasi antarabangsa.</p>
+            <div class="card-badge-tag">ANTARABANGSA • 2025</div>
+            <h3 class="card-heading-title">IIEF 2025</h3>
+            <p class="card-body-text">International Innovation &amp; Exhibition Fair (IIEF 2025). Pertandingan STEM/Inovasi (Anugerah Emas) anjuran Kolej MARA Kulim.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(21, 'Sijil Pembentang Antarabangsa')">Lihat Sijil M/S 21 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(22, 'Sijil Emas IIEF 2025')">Dokumen Sokongan ›</button>
+        </div>
+
+        <!-- InnoZilla 2025 -->
+        <div class="standard-bento-card card-design-2">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2025</div>
+            <h3 class="card-heading-title">InnoZilla 2025 - SDG Innovation</h3>
+            <p class="card-body-text">SDG Innovation Competition. Pertandingan STEM/Inovasi (Anugerah Perak) anjuran Universiti Sains Malaysia (USM).</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(24, 'Sijil Perak InnoZilla')">Dokumen Sokongan ›</button>
+        </div>
+
+        <!-- IIMOS 2025 -->
+        <div class="standard-bento-card card-design-2">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2025</div>
+            <h3 class="card-heading-title">IIMOS 2025</h3>
+            <p class="card-body-text">International Information Management Online Showcase (IIMOS). Pertandingan STEM/Inovasi (Anugerah Emas).</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(23, 'Sijil Emas IIMOS 2025')">Dokumen Sokongan ›</button>
+        </div>
+
+        <!-- COSCID 2022 -->
+        <div class="standard-bento-card card-design-2">
+          <div>
+            <div class="card-badge-tag">ANTARABANGSA • 2022</div>
+            <h3 class="card-heading-title">1st COSCID Colloquium</h3>
+            <p class="card-body-text">Coloquium of Science Education 1st COSCID. Pencapaian STEM (Pembentang Terbaik) anjuran UIN Suska Riau.</p>
+          </div>
+          <!-- Nota: Saya meletakkan M/S 26 sebagai tekaan. Sila semak/kemas kini jika perlu. -->
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(26, 'Sijil Pembentang Terbaik COSCID')">Dokumen Sokongan ›</button>
         </div>
       </div>
     </div>
@@ -330,27 +493,36 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">BAHAGIAN 4</div>
-        <h2 class="section-title">Sumbangan Kebangsaan</h2>
+        <h2 class="section-title">Sumbangan &amp; Penglibatan Kebangsaan</h2>
         <p class="section-desc">Pelantikan sebagai panel pakar kurikulum BPK KPM dan penyelidikan Universiti Kebangsaan Malaysia (UKM).</p>
       </div>
 
-      <div class="bento-grid-2col stripe-reveal">
-        <div class="standard-bento-card">
+      <div class="bento-grid-3col stripe-reveal">
+        <div class="standard-bento-card card-design-3">
           <div>
-            <div class="card-badge-tag">KEBANGSAAN • UKM BANGI</div>
-            <h3 class="card-heading-title">Panel Pakar Fizik & Dron Pendidikan UKM</h3>
-            <p class="card-body-text">Penyelidikan Pembinaan Kandungan Ilmu Fizik Teknologi Dron Pendidikan Menengah anjuran Universiti Kebangsaan Malaysia.</p>
+            <div class="card-badge-tag">STEM/TEK PENDIDIKAN • 2025 • UKM</div>
+            <h3 class="card-heading-title">Panel Pakar Penyelidikan Dron UKM</h3>
+            <p class="card-body-text">Panel Pakar bagi Penyelidikan Pembinaan Kandungan Ilmu Fizik Teknologi Dron Dalam Pendidikan Menengah.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(28, 'Surat Pelantikan Panel UKM')">Lihat Surat M/S 28 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(28, 'Surat Lantikan Panel Dron Kebangsaan UKM')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-3">
           <div>
-            <div class="card-badge-tag">KEBANGSAAN • BPK KPM</div>
-            <h3 class="card-heading-title">Panel MOBIM & Reka Bentuk SDG 4IR BPK</h3>
-            <p class="card-body-text">Panel Pembinaan Modul MOBIM Sains Tambahan & Reka Bentuk Penerapan Matlamat Pembangunan Mampan (SDG) Fizik.</p>
+            <div class="card-badge-tag">STEM/TEK PENDIDIKAN • 2024 • BPK</div>
+            <h3 class="card-heading-title">Panel Pembinaan Modul (MOBIM) Sains Tambahan</h3>
+            <p class="card-body-text">Panel Pembinaan Modul Bimbingan (MOBIM) KSSM Mata Pelajaran Sains Tambahan (Domain Fizik).</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(29, 'Surat Penghargaan BPK KPM')">Lihat Surat M/S 29 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(29, 'Surat Penghargaan Panel MOBIM BPK')">Dokumen Sokongan ›</button>
+        </div>
+
+        <div class="standard-bento-card card-design-3">
+          <div>
+            <div class="card-badge-tag">STEM/TEK PENDIDIKAN • 2023 • BPK</div>
+            <h3 class="card-heading-title">Panel Reka Bentuk Panduan PDP SDG & 4IR</h3>
+            <p class="card-body-text">Panel Reka Bentuk Panduan PDP Berkaitan Penerapan SDG & 4IR Dalam Mata Pelajaran Fizik.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(30, 'Surat Penghargaan Panel SDG 4IR BPK')">Dokumen Sokongan ›</button>
         </div>
       </div>
     </div>
@@ -363,27 +535,36 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">BAHAGIAN 5</div>
-        <h2 class="section-title">Sumbangan Negeri Perak</h2>
+        <h2 class="section-title">Sumbangan &amp; Penglibatan Negeri Perak</h2>
         <p class="section-desc">Penggerak inovasi pedagogi negeri, penulis modul anekdot JPN Perak, dan bimbingan guru daerah.</p>
       </div>
 
-      <div class="bento-grid-2col stripe-reveal">
-        <div class="standard-bento-card">
+      <div class="bento-grid-3col stripe-reveal">
+        <div class="standard-bento-card card-design-4">
           <div>
-            <div class="card-badge-tag">NEGERI PERAK • 2026</div>
-            <h3 class="card-heading-title">Penulis Buku Anekdot Edufluencers JPN Perak</h3>
-            <p class="card-body-text">Karya penulisan ilmiah dalam buku "Rona-Rona Pendidik: Anekdot Edufluencers KPM Negeri Perak".</p>
+            <div class="card-badge-tag">STEM • 2026 • JPN PERAK</div>
+            <h3 class="card-heading-title">Panel Penggubal Modul Intervensi Menengah Atas</h3>
+            <p class="card-body-text">Panel Penggubal Penyediaan Modul Intervensi Menengah Atas Perak 2025 anjuran Jabatan Pendidikan Negeri Perak.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(75, 'Sijil Penulis Anekdot JPN Perak')">Lihat Sijil M/S 75 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(75, 'Surat Lantikan Panel Modul Intervensi Perak')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-4">
           <div>
-            <div class="card-badge-tag">NEGERI PERAK • 2024-2026</div>
-            <h3 class="card-heading-title">Penceramah Bengkel & Bimbingan Pedagogi Digital</h3>
-            <p class="card-body-text">Membimbing ratusan guru Fizik dan sains seluruh Perak dalam penggunaan alat digital PAK21.</p>
+            <div class="card-badge-tag">STEM / INOVASI • 2024 • JPN PERAK</div>
+            <h3 class="card-heading-title">Konvensyen Duta Guru & Guru Cemerlang</h3>
+            <p class="card-body-text">Pencapaian STEM / Inovasi (Anugerah Perak) sempena Konvensyen Duta Guru dan Guru Cemerlang anjuran JPN Perak.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(80, 'Sijil Penceramah Negeri')">Lihat Sijil M/S 80 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(80, 'Sijil Konvensyen Duta Guru Perak')">Dokumen Sokongan ›</button>
+        </div>
+
+        <div class="standard-bento-card card-design-4">
+          <div>
+            <div class="card-badge-tag">STEM / INOVASI • 2023 • JPN PERAK</div>
+            <h3 class="card-heading-title">Kolokium Pendidikan Negeri Perak</h3>
+            <p class="card-body-text">Pencapaian STEM / Inovasi (Anugerah Perak) sempena Kolokium Pendidikan anjuran Jabatan Pendidikan Negeri Perak.</p>
+          </div>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(82, 'Sijil Kolokium Pendidikan Negeri Perak')">Dokumen Sokongan ›</button>
         </div>
       </div>
     </div>
@@ -396,27 +577,27 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">BAHAGIAN 6</div>
-        <h2 class="section-title">Sumbangan Daerah & Institusi</h2>
+        <h2 class="section-title">Sumbangan &amp; Penglibatan Daerah &amp; Institusi</h2>
         <p class="section-desc">Kepimpinan guru cemerlang daerah Kerian dan pembudayaan inovasi di SMK Agama Kerian.</p>
       </div>
 
       <div class="bento-grid-2col stripe-reveal">
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-5">
           <div>
             <div class="card-badge-tag">DAERAH KERIAN • 2026</div>
             <h3 class="card-heading-title">Yang Dipertua Majlis Guru Cemerlang (MGC) Kerian</h3>
             <p class="card-body-text">Memimpin kepakaran guru cemerlang daerah Kerian dalam memperkasa kualiti pengajaran dan pembelajaran.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(85, 'Surat Pelantikan YDP MGC')">Lihat Surat M/S 85 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(85, 'Surat Pelantikan YDP MGC')">Dokumen Sokongan ›</button>
         </div>
 
-        <div class="standard-bento-card">
+        <div class="standard-bento-card card-design-5">
           <div>
             <div class="card-badge-tag">SMK AGAMA KERIAN</div>
             <h3 class="card-heading-title">Penyelaras Inovasi & Digital Sekolah</h3>
             <p class="card-body-text">Membangunkan sistem pengurusan digital sekolah dan membimbing murid dalam pertandingan STEM.</p>
           </div>
-          <button class="bento-action-link" onclick="window.openDarkroomLightbox(15, 'Perakuan Pengetua SMKA Kerian')">Lihat Sokongan Pengetua M/S 15 ›</button>
+          <button class="bento-action-link" onclick="window.openDarkroomLightbox(15, 'Perakuan Pengetua SMKA Kerian')">Dokumen Sokongan ›</button>
         </div>
       </div>
     </div>
@@ -439,7 +620,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/physplot_poster_hd.png', 'PhysPlot AI — Enjin Pemplotan Graf Sains')">
             <img src="assets/posters/physplot_poster_hd.png" alt="PhysPlot AI" class="poster-card-img">
-            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+            <div class="poster-zoom-badge">Zoom HD</div>
           </div>
           <div>
             <div class="card-badge-tag">ENJIN GRAF SAINS</div>
@@ -453,7 +634,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/headcountpro_poster_hd.png', 'HeadcountPro AI — SMARTER DATA. BETTER DECISIONS.')">
             <img src="assets/posters/headcountpro_poster_hd.png" alt="HeadcountPro AI" class="poster-card-img">
-            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+            <div class="poster-zoom-badge">Zoom HD</div>
           </div>
           <div>
             <div class="card-badge-tag">ANALITIK SPM</div>
@@ -467,7 +648,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/myphysicstutor_poster_hd.png', 'My Physics Tutor — Belajar Fizik Interaktif')">
             <img src="assets/posters/myphysicstutor_poster_hd.png" alt="My Physics Tutor" class="poster-card-img">
-            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+            <div class="poster-zoom-badge">Zoom HD</div>
           </div>
           <div>
             <div class="card-badge-tag">HAB MAKMAL MAYA 3D</div>
@@ -481,7 +662,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/cidssuitespro_poster_hd.png', 'CIDS Suites Pro 2.0')">
             <img src="assets/posters/cidssuitespro_poster_hd.png" alt="CIDS Suites Pro 2.0" class="poster-card-img">
-            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+            <div class="poster-zoom-badge">Zoom HD</div>
           </div>
           <div>
             <div class="card-badge-tag">AUTOMASI PENDIDIK</div>
@@ -495,7 +676,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.openPosterLightbox('assets/posters/cikguscan_poster_hd.png', 'CikguScan AI')">
             <img src="assets/posters/cikguscan_poster_hd.png" alt="CikguScan AI" class="poster-card-img">
-            <div class="poster-zoom-badge">🔍 Zoom HD</div>
+            <div class="poster-zoom-badge">Zoom HD</div>
           </div>
           <div>
             <div class="card-badge-tag">IMBASAN OMR PINTAR</div>
@@ -509,7 +690,7 @@
         <div class="standard-bento-card">
           <div class="poster-card-frame" onclick="window.location.href='#video'">
             <img src="assets/screenshots/app_screenshot_1.png" alt="PhysFlix" class="poster-card-img">
-            <div class="poster-zoom-badge">▶ Tonton Video</div>
+            <div class="poster-zoom-badge">Tonton Video</div>
           </div>
           <div>
             <div class="card-badge-tag">SUMBER TERBUKA (OER)</div>
@@ -530,50 +711,58 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">BAHAGIAN 8</div>
-        <h2 class="section-title">Video Persembahan Calon</h2>
+        <h2 class="section-title">Video Pencalonan Anugerah Khas Pendidikan - Pencipta Kandungan Digital</h2>
         <p class="section-desc">Video persembahan rasmi memperkenalkan diri, demonstrasi ekosistem digital, impak bilik darjah dan visi masa depan.</p>
       </div>
 
-      <div class="stripe-video-container stripe-reveal">
-        <div class="video-frame-aspect">
-          <video id="cinema-video" class="video-element-tag" controls poster="assets/images/cover_full.jpg" preload="metadata">
-            <source src="../ABDUL HALIM_ARA 3001.mp4" type="video/mp4">
-            Pelayar anda tidak menyokong video HTML5.
-          </video>
-        </div>
-
-        <div class="video-chapters-tray">
-          <div class="video-tray-heading">Penanda Bab Video (Klik untuk Menonton):</div>
-          <div class="video-chips-row">
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(0)">
-              <div class="chapter-time-code">00:00</div>
-              <div class="chapter-label-text">Falsafah Teknologi PdP</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(25)">
-              <div class="chapter-time-code">00:25</div>
-              <div class="chapter-label-text">Profil & Apple Learning Coach</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(75)">
-              <div class="chapter-time-code">01:15</div>
-              <div class="chapter-label-text">MyPhysicsTutor & Makmal Maya</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(180)">
-              <div class="chapter-time-code">03:00</div>
-              <div class="chapter-label-text">PhysPlot & Analisis Graf SPM</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(285)">
-              <div class="chapter-time-code">04:45</div>
-              <div class="chapter-label-text">HeadcountPro & Intervensi ETR</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(390)">
-              <div class="chapter-time-code">06:30</div>
-              <div class="chapter-label-text">CIDS Suites Pro (Automasi RPH)</div>
-            </button>
-            <button class="video-chapter-button" onclick="window.seekVideoChapter(510)">
-              <div class="chapter-time-code">08:30</div>
-              <div class="chapter-label-text">Impak & Visi Masa Depan</div>
-            </button>
+      <div class="premium-player-wrapper stripe-reveal">
+        <div class="premium-player-facade" id="video-facade" onclick="playPremiumVideo()">
+          <div class="premium-player-bg"></div>
+          
+          <div class="premium-play-center">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </div>
+
+          <div class="premium-player-controls">
+            <!-- Progress Bar -->
+            <div class="premium-progress-track">
+              <div class="premium-progress-fill"></div>
+              <div class="premium-progress-handle"></div>
+            </div>
+            
+            <div class="premium-controls-row">
+              <div class="premium-controls-left">
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                <div class="premium-divider"></div>
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></button>
+                <div class="premium-volume-track">
+                  <div class="premium-volume-fill"></div>
+                  <div class="premium-volume-handle"></div>
+                </div>
+                <span class="premium-time">04:35 / 23:40</span>
+              </div>
+              
+              <div class="premium-controls-right">
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect><path d="M7 15h3M14 15h3"></path></svg></button>
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg></button>
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg></button>
+                <button class="premium-icon-btn"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="premium-player-iframe-container" id="video-iframe-container" style="display: none;">
+          <iframe 
+            id="premium-video-iframe"
+            src="" 
+            data-src="https://drive.google.com/file/d/1IBBEeYOJLNqqsWmieiVF7j79OyEy3a8K/preview?autoplay=1"
+            class="video-element-tag"
+            style="border: none;"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
@@ -586,25 +775,28 @@
     <div class="container">
       <div class="stripe-reveal">
         <div class="section-eyebrow">PUSTAKA DOKUMEN</div>
-        <h2 class="section-title">96 Muka Surat Dokumen & Sijil Sokongan</h2>
+        <h2 class="section-title">Borang Permohonan Pencalonan dan Dokumen Sokongan</h2>
         <p class="section-desc">Akses resolusi tinggi kepada fail borang pencalonan rasmi, sijil anugerah, surat pelantikan, dan modul amali.</p>
       </div>
 
-      <div class="stripe-vault-toolbar stripe-reveal">
-        <div class="vault-filter-chips">
-          <button class="vault-chip-btn active" onclick="window.filterStripeVault('all', this)">Semua Bukti</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('borang', this)">Borang Rasmi (M/S 1-16)</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('antarabangsa', this)">Antarabangsa</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('kebangsaan', this)">Kebangsaan & APC</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('panel', this)">Panel Pakar & BPK</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('negeri', this)">Negeri & Daerah</button>
-          <button class="vault-chip-btn" onclick="window.filterStripeVault('modul', this)">Modul Amali (M/S 63-70)</button>
+      <div class="flipbook-wrapper stripe-reveal">
+        <div class="flipbook-stage">
+          <div id="premium-flipbook">
+            <!-- Pages injected via flipbook-init.js -->
+          </div>
         </div>
-        <input type="text" class="vault-search-box" placeholder="Cari tajuk sijil / m.surat..." oninput="window.searchStripeVault(this)">
-      </div>
-
-      <div class="stripe-photos-grid" id="vault-photos-grid">
-        <!-- Rendered by gallery-modal.js -->
+        
+        <div class="flipbook-controls">
+          <button class="flip-btn prev-btn" id="flip-prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            Selak Kiri
+          </button>
+          <span class="flip-page-info" id="flip-page-num">Muka Surat 1</span>
+          <button class="flip-btn next-btn" id="flip-next">
+            Selak Kanan
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -695,9 +887,11 @@
   </div>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/graph-simulator.js"></script>
   <script src="js/gallery-modal.js"></script>
+  <script src="js/flipbook-init.js"></script>
   <script src="js/main.js"></script>
 
 </body>

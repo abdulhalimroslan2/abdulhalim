@@ -1,0 +1,341 @@
+/* ==========================================================================
+   AWARDS DASHBOARD SPECIFIC STYLES
+   ========================================================================== */
+
+.section-awards-dashboard {
+  padding-top: 120px;
+  background: radial-gradient(circle at top left, rgba(234, 237, 255, 0.5) 0%, rgba(255,255,255,0) 50%);
+}
+
+/* 1. Dashboard Hero */
+.awards-dashboard-hero {
+  display: grid;
+  grid-template-columns: auto 1fr 300px;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.trophy-showcase {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  background: var(--bg-card);
+}
+
+.trophy-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.awards-hero-text {
+  padding-right: 20px;
+}
+
+.awards-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--brand-indigo);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.awards-sub-title {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.awards-desc {
+  font-size: 1.125rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.awards-desc-en {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.awards-quote-box {
+  background: rgba(237, 233, 254, 0.6);
+  padding: 30px;
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.05);
+}
+
+.quote-mark {
+  font-size: 4rem;
+  color: var(--brand-indigo);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  opacity: 0.2;
+  font-family: serif;
+  line-height: 1;
+}
+
+.awards-quote-box p {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  color: var(--brand-indigo);
+  font-size: 1.1rem;
+}
+
+/* 2. Portfolio Header */
+.awards-portfolio-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.portfolio-icon {
+  font-size: 2rem;
+  color: var(--brand-indigo);
+}
+
+.portfolio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-body);
+}
+
+.portfolio-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* 3. Folder Cards Grid */
+.folder-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+/* The Folder Card Base */
+.folder-card {
+  display: block;
+  position: relative;
+  border-radius: 0 20px 20px 20px;
+  margin-top: 30px; /* space for the tab */
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.folder-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* The Tab on top of the folder */
+.folder-tab {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 65%;
+  height: 30px;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  /* Background is inherited via mix-blend or set specifically */
+}
+
+/* We use ::before on folder-card to create a continuous background for both tab and body, 
+   but it's easier to just style tab and content separately with matching gradients. */
+
+.folder-content {
+  padding: 24px;
+  border-radius: 0 20px 20px 20px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  background: inherit; /* will inherit from parent card */
+}
+
+/* Specific Folder Colors (Mockup inspired) */
+.folder-purple .folder-tab, .folder-purple .folder-content {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e0caff 100%);
+}
+.folder-pink .folder-tab, .folder-pink .folder-content {
+  background: linear-gradient(135deg, #fae8ff 0%, #fbcfe8 100%);
+}
+.folder-red .folder-tab, .folder-red .folder-content {
+  background: linear-gradient(135deg, #ffe4e6 0%, #fecdd3 100%);
+}
+.folder-orange .folder-tab, .folder-orange .folder-content {
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+}
+.folder-blue .folder-tab, .folder-blue .folder-content {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+.premium-badge {
+  background: #4f46e5;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.4);
+}
+
+.folder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.folder-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-body);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.folder-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: auto; /* push footer to bottom */
+}
+
+.folder-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.folder-stats {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-body);
+  opacity: 0.7;
+}
+
+.folder-arrow {
+  width: 28px;
+  height: 28px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+/* 4. Impact Banner */
+.impact-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #f3e8ff 0%, #fae8ff 50%, #ffe4e6 100%);
+  padding: 24px 32px;
+  border-radius: 20px;
+  gap: 32px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+}
+
+.impact-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-right: 2px solid rgba(0,0,0,0.05);
+  padding-right: 32px;
+  min-width: 250px;
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+}
+
+.impact-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-body);
+}
+
+.impact-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.impact-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.impact-desc-en {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .folder-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-dashboard-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .trophy-showcase {
+    margin: 0 auto;
+  }
+
+  .awards-hero-text {
+    padding-right: 0;
+  }
+
+  .folder-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .impact-icon-wrapper {
+    border-right: none;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    padding-right: 0;
+    padding-bottom: 16px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .folder-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

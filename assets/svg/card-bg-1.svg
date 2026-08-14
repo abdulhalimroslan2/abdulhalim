@@ -1,0 +1,26 @@
+<svg width="400" height="400" viewBox="0 0 400 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="grad1" cx="100%" cy="100%" r="100%">
+      <stop offset="0%" stop-color="#ff69b4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff69b4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Force Solid White Background to prevent Dark Mode overriding -->
+  <rect width="400" height="400" fill="#ffffff"/>
+  <rect width="400" height="400" fill="url(#grad1)"/>
+  <g stroke="#ff1493" stroke-opacity="0.1" stroke-width="1.5" fill="none">
+    <circle cx="400" cy="400" r="50"/>
+    <circle cx="400" cy="400" r="70"/>
+    <circle cx="400" cy="400" r="90"/>
+    <circle cx="400" cy="400" r="110"/>
+    <circle cx="400" cy="400" r="130"/>
+    <circle cx="400" cy="400" r="150"/>
+    <circle cx="400" cy="400" r="170"/>
+    <circle cx="400" cy="400" r="190"/>
+    <circle cx="400" cy="400" r="210"/>
+    <circle cx="400" cy="400" r="230"/>
+    <circle cx="400" cy="400" r="250"/>
+    <circle cx="400" cy="400" r="270"/>
+    <circle cx="400" cy="400" r="290"/>
+  </g>
+</svg>

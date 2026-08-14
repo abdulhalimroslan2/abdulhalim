@@ -167,12 +167,47 @@
      4. STICKY HEADER SCROLL STATE
      ========================================================================== */
   const header = document.querySelector('.site-header');
+  let headerTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
+    if (!headerTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 40) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        headerTicking = false;
+      });
+      headerTicking = true;
     }
-  });
+  }, { passive: true });
+
+  /* ==========================================================================
+     5. HARDWARE-ACCELERATED PARALLAX BACKGROUND
+     ========================================================================== */
+  const parallaxBg = document.getElementById('parallax-bg');
+  let parallaxTicking = false;
+  
+  if (parallaxBg) {
+    window.addEventListener('scroll', () => {
+      if (!parallaxTicking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          // Calculate max scroll height (body height - viewport height)
+          const maxScroll = Math.max(1, document.body.scrollHeight - window.innerHeight);
+          
+          let scrollPercent = scrollY / maxScroll;
+          if (scrollPercent > 1) scrollPercent = 1;
+          if (scrollPercent < 0) scrollPercent = 0;
+          
+          // Translate from 0% to -20% of the element's height (since it's 130% tall, it won't reveal edges)
+          parallaxBg.style.transform = `translate3d(0, -${scrollPercent * 20}%, 0)`;
+          
+          parallaxTicking = false;
+        });
+        parallaxTicking = true;
+      }
+    }, { passive: true });
+  }
 
 })();

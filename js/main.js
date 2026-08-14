@@ -6,19 +6,43 @@
 (function () {
   'use strict';
 
-  // 1. Navigation Scroll Effect
   function initNavScroll() {
     const nav = document.querySelector('.stripe-nav');
     if (!nav) return;
 
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 20) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
-    });
+    }, { passive: true });
   }
+
+  // Premium Video Player Integration
+  window.playPremiumVideo = function() {
+    const facade = document.getElementById('video-facade');
+    const iframeContainer = document.getElementById('video-iframe-container');
+    const iframe = document.getElementById('premium-video-iframe');
+    
+    if (facade && iframeContainer && iframe) {
+      // Hide facade, show iframe
+      facade.style.display = 'none';
+      iframeContainer.style.display = 'block';
+      
+      // Transfer data-src to src to load the video and trigger autoplay
+      if (!iframe.getAttribute('src')) {
+        iframe.setAttribute('src', iframe.getAttribute('data-src'));
+      }
+    }
+  };
 
   // 2. Stripe Scroll Reveal Observer
   function initScrollReveal() {
