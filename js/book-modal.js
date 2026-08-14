@@ -1,6 +1,6 @@
 /**
  * PORTAL PENCALONAN ANUGERAH KHAS PENDIDIKAN: PENCIPTA KANDUNGAN DIGITAL 2026
- * 3D BOOK POPUP & INTERACTIVE MODAL CONTROLLER
+ * 3D BOOK POPUP & INTERACTIVE MODAL CONTROLLER (7 BOOKS COMPLETE)
  */
 
 (function () {
@@ -89,6 +89,46 @@
     },
     {
       id: 5,
+      title: "Modul Gravi-STEM Fizik Tingkatan 4",
+      subtitle: "Penyelidikan Inkuiri & STEM (USM, 2022)",
+      author: "Abdul Halim bin Roslan & Dr. Nur Jahan binti Ahmad",
+      publisher: "Universiti Sains Malaysia (USM) & SMKA Kerian",
+      year: "2022",
+      category: "Modul Penyelidikan & Inovasi STEM",
+      cover: "assets/books/book_gravi_stem.jpg",
+      storeUrl: "https://journal.unisza.edu.my/apj/index.php/apj/article/view/367",
+      storeLabel: "Lihat Penerbitan Jurnal ↗",
+      storeClass: "rak-buku",
+      synopsis: "Modul pembelajaran berimpak tinggi yang dibangunkan berasaskan Model Pembangunan Modul Sidek dan Model 5E Bybee bagi topik Kegravitian Fizik KSSM. Mengintegrasikan Kemahiran Berfikir Aras Tinggi (KBAT) dan Pembelajaran Berasaskan Inkuiri (PBI).",
+      features: [
+        "Penyelidikan rasmi Universiti Sains Malaysia (USM, 2022)",
+        "Kesahan pakar 0.88 dan pekali kebolehpercayaan tinggi 0.95",
+        "Liputan SK 3.1 Hukum Kegravitian Newton & SK 3.2 Hukum Kepler",
+        "Meningkatkan skor KBAT murid secara signifikan (Saiz kesan d = 1.804)"
+      ]
+    },
+    {
+      id: 6,
+      title: "Modul Amali Hibrid Fizik #MyHomePhysicsLab",
+      subtitle: "18 Amali Wajib Fizik Tingkatan 4 di Rumah",
+      author: "Abdul Halim bin Roslan (Ketua Panel), Titiyaka Jajuri, Maryam Jameelah, 'Izzuan Hilmi",
+      publisher: "Sektor Pembelajaran, Jabatan Pendidikan Negeri Perak",
+      year: "2021 / 2022",
+      category: "Modul Amali Hibrid & Panduan Guru",
+      cover: "assets/books/book_modul_hibrid.png",
+      storeUrl: "https://youtube.com/@cikguhalimfizik",
+      storeLabel: "Tonton Video Panduan Amali ↗",
+      storeClass: "tiktok",
+      synopsis: "Modul inovatif inisiatif Sektor Pembelajaran JPN Perak merangkumi 18 Amali Wajib Fizik Tingkatan 4 yang boleh dilaksanakan oleh murid secara kendiri di rumah menggunakan perisian simulasi PhET, GeoGebra dan panduan video YouTube.",
+      features: [
+        "Inisiatif Rasmi Sektor Pembelajaran JPN Perak (We Deliver)",
+        "Meliputi 18 Amali Wajib Fizik Tingkatan 4 DSKP KSSM",
+        "Integrasi simulasi interaktif PhET, GeoGebra & video amali YouTube",
+        "Panduan amali kendiri murid secara fleksibel dan hibrid"
+      ]
+    },
+    {
+      id: 7,
       title: "Rona-Rona Pendidik: Anekdot Edufluencers",
       subtitle: "Karya Penulisan Inspirasi Guru Negeri Perak",
       author: "Abdul Halim bin Roslan (Penulis Bersama Edufluencers JPN Perak)",

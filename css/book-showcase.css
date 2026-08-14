@@ -23,7 +23,7 @@
   align-items: flex-end;
   padding: 40px 20px 60px 20px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1240px;
   margin: 0 auto;
   perspective: 1200px;
 }
@@ -31,9 +31,9 @@
 /* Individual Stacked Book Item */
 .stacked-book-item {
   position: relative;
-  width: 200px;
-  height: 280px;
-  margin-left: -45px; /* Overlap effect */
+  width: 170px;
+  height: 240px;
+  margin-left: -32px; /* Overlap effect */
   cursor: pointer;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) translateZ(0);
@@ -86,9 +86,9 @@
   transform: translateX(-50%) translateY(10px);
   background: var(--brand-indigo);
   color: #ffffff;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 20px;
   white-space: nowrap;
   opacity: 0;
@@ -111,10 +111,10 @@
 
 /* Hover Interaction: Elevation & Straightening */
 .stacked-book-item:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-28px) scale(1.12);
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-26px) scale(1.16);
   z-index: 25;
-  margin-left: -15px;
-  margin-right: 30px;
+  margin-left: -10px;
+  margin-right: 25px;
 }
 
 .stacked-book-item:hover .book-card-3d {
@@ -128,8 +128,8 @@
 
 /* Subtle Stage Pedestal Reflection Line */
 .books-shelf-pedestal {
-  width: 90%;
-  max-width: 950px;
+  width: 92%;
+  max-width: 1100px;
   height: 12px;
   background: linear-gradient(to bottom, rgba(203, 213, 225, 0.6), rgba(241, 245, 249, 0.1));
   border-radius: 50%;
