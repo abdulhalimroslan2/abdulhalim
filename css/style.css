@@ -298,7 +298,7 @@ img {
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  color: var(--brand-indigo);
   margin-bottom: 8px;
 }
 
